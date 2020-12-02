@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "112228089668",
+    "firebase_url": "https://inout2020-aimers.firebaseio.com",
+    "project_id": "inout2020-aimers",
+    "storage_bucket": "inout2020-aimers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112228089668:android:963220228e5e742d5ce111",
+        "android_client_info": {
+          "package_name": "com.example.inout2020_aimers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112228089668-qf3omiavq22keealm54dqku19bl2sibj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4e94Tx838xnPMSZJZLXmPJkjtG7dDOfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112228089668-qf3omiavq22keealm54dqku19bl2sibj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
