@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DashboardFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:menu="@menu/dashboard_menu"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/ToolbarTheme"
+            app:titleTextColor="@color/black"
+
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <Button
+        android:id="@+id/btnResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_resources"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="Resources"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/btnMilestone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <Button
+        android:id="@+id/btnMilestone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_milestone"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="Milestones"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnResources"
+        app:layout_constraintTop_toTopOf="@+id/btnResources" />
+
+    <Button
+        android:id="@+id/btnBucketlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_bucketlist"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="Bucket List"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/btnResources"
+        app:layout_constraintStart_toStartOf="@+id/btnResources"
+        app:layout_constraintTop_toBottomOf="@+id/btnResources" />
+
+    <Button
+        android:id="@+id/btnSoftMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_baseline_music_note_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="SoftMusic"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/btnMilestone"
+        app:layout_constraintStart_toStartOf="@+id/btnMilestone"
+        app:layout_constraintTop_toBottomOf="@+id/btnMilestone" />
+
+    <Button
+        android:id="@+id/btnMotivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_motivation"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="Motivation"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/btnBucketlist"
+        app:layout_constraintStart_toStartOf="@+id/btnBucketlist"
+        app:layout_constraintTop_toBottomOf="@+id/btnBucketlist" />
+
+    <Button
+        android:id="@+id/btnExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_exercise"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:text="Exercise"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/btnSoftMusic"
+        app:layout_constraintStart_toStartOf="@+id/btnSoftMusic"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoftMusic" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
