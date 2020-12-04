@@ -32,6 +32,7 @@ android {
     }
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 }
 
@@ -48,4 +49,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+
+    // neumorphism
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
 }
