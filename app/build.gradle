@@ -52,4 +52,7 @@ dependencies {
 
     // neumorphism
     implementation 'com.github.fornewid:neumorphism:0.3.0'
+
+    // Animation
+    implementation 'com.airbnb.android:lottie:3.5.0'
 }

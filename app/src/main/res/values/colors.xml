@@ -6,7 +6,8 @@
     <color name="grey">#BAB9B9</color>
 
     <color name="white">#FFFFFFFF</color>
-    <color name="whiteShade">#FFeeeef0</color>
+    <color name="whiteShade">#F3F3F3</color>
+<!--    <color name="whiteShade">#FFeeeef0</color>-->
 
     <color name="colorPrimary">#f9aa33</color>
     <color name="colorPrimaryDark">#DA8609</color>

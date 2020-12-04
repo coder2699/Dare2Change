@@ -10,11 +10,10 @@
 
     <ImageView
         android:id="@+id/ivLogoSignUp"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_dtc_logo"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,11 +21,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="@string/tagline"
         android:textColor="@color/grey"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLogoSignUp" />
 
@@ -34,12 +33,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="SIGN UP"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -59,10 +58,13 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/whiteShade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             app:endIconMode="clear_text"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
 
@@ -88,11 +90,14 @@
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            app:boxBackgroundColor="@color/whiteShade"
             app:endIconMode="clear_text"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
 
             >
@@ -120,17 +125,20 @@
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            app:endIconMode="clear_text"
+            app:boxBackgroundColor="@color/whiteShade"
+            app:endIconMode="password_toggle"
             app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
-
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPasswordSignUp"
+                android:inputType="textWebPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
