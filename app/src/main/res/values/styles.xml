@@ -16,14 +16,9 @@
     <style name="CustomShapeAppearance">
         <item name="neumorph_cornerFamily">rounded</item>
         <item name="neumorph_cornerSize">8dp</item>
-
-
-        <!-- Or if wants different radii depending on the corner. -->
-        <!--<item name="neumorph_cornerSizeTopLeft">4dp</item>
-        <item name="neumorph_cornerSizeTopRight">4dp</item>
-        <item name="neumorph_cornerSizeBottomLeft">4dp</item>
-        <item name="neumorph_cornerSizeBottomRight">4dp</item>-->
     </style>
+
+
 
 
 
