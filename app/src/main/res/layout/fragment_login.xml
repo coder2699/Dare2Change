@@ -8,44 +8,28 @@
     android:background="@color/whiteShade"
     tools:context=".ui.auth.LoginFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/loading"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading"
-            />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <soup.neumorphism.NeumorphCardView
         android:id="@+id/neumorphCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:neumorph_shapeType="pressed"
-
         android:layout_marginEnd="16dp"
+
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/neumorphCardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="pressed">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:hint="Email"
             app:boxBackgroundColor="@color/whiteShade"
             app:endIconMode="clear_text"
             app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
@@ -65,27 +49,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:neumorph_shapeType="pressed"
-
         android:layout_marginEnd="16dp"
+
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btnLoginUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="pressed">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            app:boxBackgroundColor="@color/whiteShade"
-            app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
-
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:hint="Password"
+
+            app:boxBackgroundColor="@color/whiteShade"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
 
             >
 
@@ -103,15 +87,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:padding="32dp"
         android:text="LOG IN"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:neumorph_backgroundColor="@color/colorPrimary"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
@@ -147,8 +131,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Get ready to do more"
         android:fontFamily="@font/montserrat_light"
+        android:text="Get ready to do more"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -165,5 +149,34 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/welcome"
         app:lottie_repeatMode="reverse" />
+
+    <TextView
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:text="Forgot password?"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLoginUser" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackShade"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
