@@ -8,11 +8,28 @@
     android:background="@color/whiteShade"
     tools:context=".ui.auth.LoginFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <soup.neumorphism.NeumorphCardView
         android:id="@+id/neumorphCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        app:neumorph_shapeType="pressed"
 
         android:layout_marginEnd="16dp"
         android:padding="16dp"
@@ -48,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        app:neumorph_shapeType="pressed"
 
         android:layout_marginEnd="16dp"
         android:padding="16dp"

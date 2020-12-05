@@ -18,15 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/whiteShade"
             app:menu="@menu/dashboard_menu"
             app:title="@string/app_name"
             app:titleTextAppearance="@style/ToolbarTheme"
-            app:titleTextColor="@color/black"
 
-            />
+            app:titleTextColor="@color/colorPrimaryDark" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
