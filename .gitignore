@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+/app/src/main/java/com/example/inout2020_aimers/utils/SecretKeys.kt

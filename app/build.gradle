@@ -51,6 +51,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
 
+    // Google Signin
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    
     // neumorphism
     implementation 'com.github.fornewid:neumorphism:0.3.0'
 
