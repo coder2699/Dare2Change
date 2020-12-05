@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/emailVerificationActivity"
-        android:name="com.example.inout2020_aimers.ui.auth.EmailVerificationActivity"
+        android:name="com.example.inout2020_aimers.ui.auth.EmailVerificationFragment"
         android:label="fragment_email_verification_activity"
         tools:layout="@layout/fragment_email_verification_activity" />
 </navigation>

@@ -18,7 +18,7 @@ import kotlinx.coroutines.android.awaitFrame
 import kotlinx.coroutines.launch
 
 
-class EmailVerificationActivity : Fragment(R.layout.fragment_email_verification_activity) {
+class EmailVerificationFragment : Fragment(R.layout.fragment_email_verification_activity) {
 
     private val TAG = "EmailVerificationActivity"
     private lateinit var auth : FirebaseAuth

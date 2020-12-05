@@ -11,6 +11,7 @@ import com.example.inout2020_aimers.databinding.FragmentSignupBinding
 import com.example.inout2020_aimers.ui.HomeActivity
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 
 class SignupFragment : Fragment(R.layout.fragment_signup) {
 
@@ -21,10 +22,6 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
         super.onCreate(savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
-    }
-
-    override fun onStart() {
-        super.onStart()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,17 +54,19 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
                 // Signing up user
                 auth.createUserWithEmailAndPassword(email,password)
                     .addOnSuccessListener {
+
+                        // Sign up Success
                         Log.d(TAG, "onViewCreated: Signing up user -> SUCCESS")
-                        Snacker(view,"Account created successfully").success()
 
-                        auth.currentUser!!.sendEmailVerification()
-                            .addOnSuccessListener {
-                                Log.d(TAG, "onViewCreated: Verification mail sent")
-                            }.addOnFailureListener {
-                                Log.d(TAG, "onViewCreated: Failed to send verification email")
-                            }
+                        // User email verification
+                        sendVerificationMail()
 
-                        findNavController().navigate(R.id.action_signupFragment_to_emailVerificationActivity)
+                        // Setting Display Name for account
+                        val isDisplaynameSet = setDisplayName(userName)
+
+                        if (isDisplaynameSet){
+                            findNavController().navigate(R.id.action_signupFragment_to_emailVerificationActivity)
+                        }
 
 
                     }
@@ -79,16 +78,32 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
                         // Loading UI stopped
                         UnSetLoading()
                     }
-                    .addOnCompleteListener {
-                        Log.d(TAG, "onViewCreated: COMPLETED :)")
-                    }
-
-
             }
-
         }
 
 
+
+    }
+
+    fun sendVerificationMail(){
+        auth.currentUser!!.sendEmailVerification()
+            .addOnSuccessListener {
+                Log.d(TAG, "onViewCreated: Verification mail sent")
+            }.addOnFailureListener {
+                Log.d(TAG, "onViewCreated: Failed to send verification email")
+            }
+    }
+
+    fun setDisplayName(displayName : String): Boolean {
+        var status = false
+        auth.currentUser?.updateProfile(
+            UserProfileChangeRequest.Builder()
+                .setDisplayName(displayName)
+                .build())
+            ?.addOnSuccessListener {
+                status = true
+            }
+        return status
 
     }
 
