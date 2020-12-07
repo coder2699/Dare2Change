@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.inout2020_aimers.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.inout2020_aimers.ui.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/protipFragment"
+        android:name="com.example.inout2020_aimers.ui.ProtipFragment"
+        android:label="fragment_protip"
+        tools:layout="@layout/fragment_protip" />
+    <fragment
+        android:id="@+id/blockerFragment"
+        android:name="com.example.inout2020_aimers.ui.BlockerFragment"
+        android:label="fragment_blocker"
+        tools:layout="@layout/fragment_blocker" />
+</navigation>

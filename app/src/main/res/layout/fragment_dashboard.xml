@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteShade"
+    tools:context=".ui.DashboardFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteShade"
+            app:menu="@menu/dashboard_menu"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/ToolbarTheme"
+
+            app:titleTextColor="@color/colorPrimaryDark" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:drawableTop="@drawable/ic_resources"
+        android:drawablePadding="8dp"
+        android:text="Resources"
+        android:theme="@style/dashBoardItems"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/btnBucketlist"
+        app:layout_constraintEnd_toStartOf="@+id/btnMilestone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnMilestone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:drawableTop="@drawable/ic_milestone"
+        android:text="Milestones"
+        android:theme="@style/dashBoardItems"
+        app:layout_constraintBottom_toTopOf="@+id/btnSoftMusic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnResources"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnBucketlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_bucketlist"
+
+        android:text="Bucket List"
+
+        android:theme="@style/dashBoardItems"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnMotivation"
+        app:layout_constraintEnd_toEndOf="@+id/btnResources"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnResources"
+        app:layout_constraintTop_toBottomOf="@+id/btnResources"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnSoftMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_baseline_music_note_24"
+
+        android:text="SoftMusic"
+        android:theme="@style/dashBoardItems"
+        app:layout_constraintBottom_toTopOf="@+id/btnExercise"
+        app:layout_constraintEnd_toEndOf="@+id/btnMilestone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnMilestone"
+        app:layout_constraintTop_toBottomOf="@+id/btnMilestone"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnMotivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_motivation"
+        android:text="Motivation"
+        android:theme="@style/dashBoardItems"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnBucketlist"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnBucketlist"
+        app:layout_constraintTop_toBottomOf="@+id/btnBucketlist"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_exercise"
+        android:theme="@style/dashBoardItems"
+        android:text="Exercise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSoftMusic"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnSoftMusic"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoftMusic"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

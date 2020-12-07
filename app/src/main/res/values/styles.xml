@@ -8,10 +8,26 @@
     </style>
 
     <style name="ToolbarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:fontFamily">@font/montserrat_light</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
         <item name="android:textSize">18sp</item>
 
     </style>
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">8dp</item>
+    </style>
+
+    <style name="dashBoardItems">
+        <item name="drawableTint">@color/blackShade</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:padding">32dp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
 
 
 
