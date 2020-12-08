@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Milestones.DetailsFragment">
+
+    <TextView
+        android:id="@+id/mainHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="Main-Goal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <ImageView
+        android:id="@+id/one"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/mainHead"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/direction" />
+
+    <TextView
+        android:id="@+id/goal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainHead"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@id/one"
+        android:hint="Sub-Goal1"
+        android:textColor="#7986CB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <ImageView
+        android:id="@+id/se"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/goal1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/se" />
+
+    <ImageView
+        android:id="@+id/two"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/se"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/leftdirection" />
+
+    <TextView
+        android:id="@+id/goal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/se"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/two"
+        android:hint="Sub-Goal1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F06292" />
+
+    <ImageView
+        android:id="@+id/sw"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/goal2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/sw" />
+
+    <ImageView
+        android:id="@+id/three"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/sw"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/direction" />
+
+    <TextView
+        android:id="@+id/goal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sw"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@id/three"
+        android:hint="Sub-Goal1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorSuccess" />
+
+    <ImageView
+        android:id="@+id/se2"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/goal3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/se" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/se2"
+        android:src="@drawable/finish"
+        android:layout_toLeftOf="@id/two" />
+</RelativeLayout>

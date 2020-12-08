@@ -14,6 +14,10 @@
             android:id="@+id/action_dashboardFragment_to_displayFragment"
             app:destination="@id/displayFragment"
             app:popUpTo="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -48,6 +52,26 @@
         <action
             android:id="@+id/action_addItemFragment_to_displayFragment"
             app:destination="@id/displayFragment"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.inout2020_aimers.Milestones.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGoalFragment"
+        android:name="com.example.inout2020_aimers.Milestones.AddGoalFragment"
+        android:label="fragment_add_goal"
+        tools:layout="@layout/fragment_add_goal" >
+        <action
+            android:id="@+id/action_addGoalFragment_to_startFragment"
+            app:destination="@id/startFragment"
             app:popUpTo="@id/dashboardFragment" />
     </fragment>
 </navigation>
