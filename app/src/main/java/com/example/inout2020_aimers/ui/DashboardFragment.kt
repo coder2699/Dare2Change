@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentDashboardBinding
 import com.example.inout2020_aimers.ui.auth.AuthActivity
@@ -27,6 +28,9 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
         auth = FirebaseAuth.getInstance()
 
+        binding.btnBucketlist.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_displayFragment)
+        }
 
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->
 

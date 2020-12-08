@@ -9,7 +9,12 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.inout2020_aimers.ui.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_displayFragment"
+            app:destination="@id/displayFragment"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.inout2020_aimers.ui.AccountFragment"
@@ -25,4 +30,24 @@
         android:name="com.example.inout2020_aimers.ui.BlockerFragment"
         android:label="fragment_blocker"
         tools:layout="@layout/fragment_blocker" />
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.example.inout2020_aimers.bucket.BucketList.DisplayFragment"
+        android:label="fragment_display"
+        tools:layout="@layout/fragment_display" >
+        <action
+            android:id="@+id/action_displayFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:popUpTo="@id/displayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.inout2020_aimers.bucket.BucketList.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/action_addItemFragment_to_displayFragment"
+            app:destination="@id/displayFragment"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
 </navigation>
