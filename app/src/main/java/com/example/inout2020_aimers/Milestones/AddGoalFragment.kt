@@ -60,12 +60,18 @@ class AddGoalFragment : Fragment() {
         }
         binding.doneBtn.setOnClickListener {
             goalsViewModel = ViewModelProviders.of(this).get(GoalsViewModel::class.java)
-            if (binding.mainGoalDate.text.toString() == "" || binding.mainGoalEditText.text.toString() == "" || binding.subGoal1Date.text.toString() == "" ||
-                binding.subGoal1EditText.text.toString() == "" || binding.subGoal2Date.text.toString() == "" || binding.subGoal3Date.text.toString() == "" ||
-                binding.subGoal2EditText.text.toString() == "" || binding.subGoal3EditText.text.toString() == ""
+            if (binding.mainGoalDate.text.toString() == "" || binding.mainGoalEditText.text.toString() == ""
             ) {
-                Snacker(it,"All fields are required to continue").error()
-            } else {
+                Snacker(it,"Main Goal cannot be empty").error()
+            } else if(binding.subGoal1Date.text.toString() == "" || binding.subGoal1EditText.text.toString() == ""
+            ){
+                Snacker(it,"Atleast add 1st Sub-Goal").error()
+            } else if((binding.subGoal2Date.text.toString() == "" || binding.subGoal2EditText.text.toString() == "")&&
+                (binding.subGoal3Date.text.toString() != "" || binding.subGoal3EditText.text.toString() != "")
+            ){
+                Snacker(it,"2nd Sub-Goal should be added").error()
+            }
+            else {
                 val goal = Goals(
                     mainGoal = binding.mainGoalEditText.text.toString(),
                     mainGoalDate = binding.mainGoalDate.text.toString(),

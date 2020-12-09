@@ -5,6 +5,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
     </style>
 
     <style name="ToolbarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -19,12 +28,7 @@
     </style>
 
     <style name="dashBoardItems">
-        <item name="drawableTint">@color/blackShade</item>
-        <item name="android:drawablePadding">8dp</item>
-        <item name="android:textColor">@color/blackShade</item>
-        <item name="android:padding">32dp</item>
-        <item name="fontFamily">@font/montserrat_medium</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:padding">30dp</item>
     </style>
 
 

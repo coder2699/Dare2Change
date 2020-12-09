@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.inout2020_aimers.Milestones.Database.Goals
@@ -34,11 +36,27 @@ class DetailsFragment : BottomSheetDialogFragment() {
         val args = arguments?.getParcelable<Goals>("Goals")
 
         if (args != null) {
-            Toast.makeText(context,args.mainGoal,Toast.LENGTH_LONG).show()
             binding.mainHead.text = args.mainGoal
             binding.goal1.text = "${args.subGoal1} (${args.subGoal1Date})"
             binding.goal2.text = "${args.subGoal2} (${args.subGoal2Date})"
             binding.goal3.text = "${args.subGoal3} (${args.subGoal3Date})"
+            if(args.subGoal2==""){
+                binding.goal2.visibility=GONE
+                binding.two.visibility= GONE
+                binding.sw.visibility= GONE
+                binding.finishTwo.visibility=VISIBLE
+                binding.goal3.visibility=GONE
+                binding.three.visibility= GONE
+                binding.se2.visibility= GONE
+                binding.finalFinish.visibility= GONE
+            }
+            else if(args.subGoal3==""){
+                binding.goal3.visibility=GONE
+                binding.three.visibility= GONE
+                binding.se2.visibility= GONE
+                binding.finalFinish.visibility= GONE
+                binding.finishThree.visibility=VISIBLE
+            }
         }
         return binding.root
     }
