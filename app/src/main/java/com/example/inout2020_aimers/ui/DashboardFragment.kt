@@ -36,6 +36,10 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
             findNavController().navigate(R.id.action_dashboardFragment_to_startFragment)
         }
 
+        binding.btnMotivation.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_motivationFragment)
+        }
+
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->
 
             Log.d(TAG, "onViewCreated: Menu clicked ")
