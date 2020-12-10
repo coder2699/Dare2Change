@@ -88,12 +88,7 @@ class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
                 startActivityForResult(it,GOOGLE_SIGNIN_REQUEST_CODE)
             }
 
-
-
         }
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
