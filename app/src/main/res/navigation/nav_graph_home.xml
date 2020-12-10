@@ -18,6 +18,9 @@
             android:id="@+id/action_dashboardFragment_to_startFragment"
             app:destination="@id/startFragment"
             app:popUpTo="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_resourceFragment"
+            app:destination="@id/resourceFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -74,4 +77,8 @@
             app:destination="@id/startFragment"
             app:popUpTo="@id/dashboardFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
+        android:label="ResourceFragment" />
 </navigation>
