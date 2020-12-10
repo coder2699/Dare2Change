@@ -18,6 +18,9 @@
             android:id="@+id/action_dashboardFragment_to_startFragment"
             app:destination="@id/startFragment"
             app:popUpTo="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_motivationFragment"
+            app:destination="@id/motivationFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -74,4 +77,9 @@
             app:destination="@id/startFragment"
             app:popUpTo="@id/dashboardFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/motivationFragment"
+        android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
+        android:label="fragment_motivation"
+        tools:layout="@layout/fragment_motivation" />
 </navigation>
