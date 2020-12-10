@@ -21,6 +21,8 @@
         <action
             android:id="@+id/action_dashboardFragment_to_resourceFragment"
             app:destination="@id/resourceFragment" />
+            android:id="@+id/action_dashboardFragment_to_motivationFragment"
+            app:destination="@id/motivationFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -81,4 +83,8 @@
         android:id="@+id/resourceFragment"
         android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
         android:label="ResourceFragment" />
+        android:id="@+id/motivationFragment"
+        android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
+        android:label="fragment_motivation"
+        tools:layout="@layout/fragment_motivation" />
 </navigation>

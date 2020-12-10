@@ -38,6 +38,11 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         binding.btnResources.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_resourceFragment)
         }
+
+        binding.btnMotivation.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_motivationFragment)
+        }
+
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->
 
             Log.d(TAG, "onViewCreated: Menu clicked ")
