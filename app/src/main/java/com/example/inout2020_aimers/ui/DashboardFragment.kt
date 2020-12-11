@@ -23,7 +23,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         binding = FragmentDashboardBinding.bind(view)
 
         auth = FirebaseAuth.getInstance()
@@ -43,6 +43,10 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
             findNavController().navigate(R.id.action_dashboardFragment_to_motivationFragment)
         }
 
+        binding.btnExercise.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_startExerciseFragment)
+        }
+
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->
 
             Log.d(TAG, "onViewCreated: Menu clicked ")
@@ -57,15 +61,15 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
                     startActivity(it)
                 }
 
-                
+
             }else if (menuItem.itemId == R.id.settings){
                 Log.d(TAG, "onViewCreated: Settings menu item clicked ")
             }
 
             return@setOnMenuItemClickListener true
-            
+
         }
-        
+
     }
 
 

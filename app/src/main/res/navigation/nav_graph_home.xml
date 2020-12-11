@@ -40,6 +40,14 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_startExerciseFragment"
+            app:destination="@id/startExerciseFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -121,4 +129,9 @@
         android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
         android:label="fragment_motivation"
         tools:layout="@layout/fragment_motivation" />
+    <fragment
+        android:id="@+id/startExerciseFragment"
+        android:name="com.example.inout2020_aimers.Exercise.StartExerciseFragment"
+        android:label="fragment_start_exercise"
+        tools:layout="@layout/fragment_start_exercise" />
 </navigation>

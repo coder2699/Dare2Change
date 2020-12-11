@@ -4,18 +4,22 @@
     <item android:title="Home"
         android:id="@+id/dashboardFragment"
         android:icon="@drawable/ic_baseline_home_24"
+        android:iconTint="@color/black"
         />
     <item android:title="Blocker"
         android:id="@+id/blockerFragment"
             android:icon="@drawable/ic_baseline_app_blocking_24"
+        android:iconTint="@color/black"
         />
 
     <item android:title="Pro Tip"
         android:id="@+id/protipFragment"
+        android:iconTint="@color/black"
         android:icon="@drawable/ic_protip"/>
 
     <item android:title="Account"
         android:id="@+id/accountFragment"
+        android:iconTint="@color/black"
         android:icon="@drawable/ic_baseline_account_circle_24"
         />
 

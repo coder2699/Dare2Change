@@ -13,7 +13,6 @@ import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.ActivityHomeBinding
 import com.example.inout2020_aimers.databinding.FragmentAuthOptionsBinding
 import com.example.inout2020_aimers.ui.HomeActivity
-import com.example.inout2020_aimers.utils.SecretKeys.Companion.GOOGLE_WEB_ID
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -76,6 +75,7 @@ class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
 
         // Google SignUp
         binding.btnGoogleSignin.setOnClickListener {
+            val GOOGLE_WEB_ID = "112228089668-qf3omiavq22keealm54dqku19bl2sibj.apps.googleusercontent.com"
 
             val googleOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(GOOGLE_WEB_ID)
