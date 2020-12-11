@@ -92,4 +92,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
+
+//    ViewPager
+    implementation 'com.github.AppIntro:AppIntro:6.0.0'
 }
