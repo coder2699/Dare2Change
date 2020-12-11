@@ -17,16 +17,28 @@ class ResourceFragment : Fragment() {
 
     var ResourceList = mutableListOf(
         Resources(//Done
+            "Eat That Frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less Time"
+        ),
+        Resources(//Done
+            "Deep Work: Rules for Focused Success in a Distracted World"
+        ),
+        Resources(//Done
+            "The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph"
+        ),
+        Resources(//Done
             "7 Habits Of Highly Effective People"
         ),
         Resources( //Done
-            "Ikigai: Japaneses secrete of Long An d Happy Life"
+            "Ikigai: Japaneses secrete of Long And Happy Life"
         ),
         Resources( //Done
             "No Excuses!: The Power of Self-Discipline for Success in Your Life "
         ),
         Resources(//Done
             "The Power of Habit: Why We Do What We Do in Life and Business "
+        ),
+        Resources(//Done
+            "War Of Art: Break Through the Blocks and Win Your Inner Creative Battles"
         )
     )
 
