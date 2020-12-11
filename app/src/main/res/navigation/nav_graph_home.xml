@@ -27,13 +27,6 @@
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
         <action
-            android:id="@+id/action_dashboardFragment_to_resourceFragment"
-            app:destination="@id/resourceFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"  />
-        <action
             android:id="@+id/action_dashboardFragment_to_motivationFragment"
             app:destination="@id/motivationFragment"
             app:enterAnim="@anim/from_right"
@@ -48,12 +41,15 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right"  />
+        <action
+            android:id="@+id/action_dashboardFragment_to_proTipsActivity"
+            app:destination="@id/proTipsActivity"
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
-    <fragment
-        android:id="@+id/accountFragment"
-        android:name="com.example.inout2020_aimers.ui.AccountFragment"
-        android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
     <fragment
         android:id="@+id/protipFragment"
         android:name="com.example.inout2020_aimers.ui.ProtipFragment"
@@ -121,10 +117,6 @@
             app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
-        android:id="@+id/resourceFragment"
-        android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
-        android:label="ResourceFragment"  />
-    <fragment
         android:id="@+id/motivationFragment"
         android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
         android:label="fragment_motivation"
@@ -133,5 +125,28 @@
         android:id="@+id/startExerciseFragment"
         android:name="com.example.inout2020_aimers.Exercise.StartExerciseFragment"
         android:label="fragment_start_exercise"
-        tools:layout="@layout/fragment_start_exercise" />
+        tools:layout="@layout/fragment_start_exercise" >
+        <action
+            android:id="@+id/action_startExerciseFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment"
+            app:popUpTo="@id/startExerciseFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <activity
+        android:id="@+id/proTipsActivity"
+        android:name="com.example.inout2020_aimers.ProTips.ProTipsActivity"
+        android:label="activity_pro_tips"
+        tools:layout="@layout/activity_pro_tips" />
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
+        android:label="ResourceFragment" />
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.inout2020_aimers.Exercise.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" />
 </navigation>

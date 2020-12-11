@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/whiteShade"
-            app:menu="@menu/dashboard_menu"
             app:title="@string/app_name"
             app:titleTextAppearance="@style/ToolbarTheme"
 
@@ -32,12 +31,14 @@
 
 
     <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnResources"
+        android:id="@+id/btnExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:drawableTop="@drawable/res"
+        android:drawableTop="@drawable/exercise"
         android:theme="@style/dashBoardItems"
+        android:text="Refresh\nYourself"
+        android:textColor="@color/black"
 
 
         app:layout_constraintBottom_toTopOf="@+id/btnBucketlist"
@@ -54,10 +55,12 @@
         android:layout_marginEnd="32dp"
         android:drawableTop="@drawable/map"
         android:theme="@style/dashBoardItems"
+        android:text="\nMilestones"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnSoftMusic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnResources"
+        app:layout_constraintStart_toEndOf="@+id/btnExercise"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
 
@@ -67,12 +70,14 @@
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/bucket"
         android:theme="@style/dashBoardItems"
+        android:text="Your\nBucket List"
+        android:textColor="@color/black"
 
         app:layout_constraintBottom_toTopOf="@+id/btnMotivation"
-        app:layout_constraintEnd_toEndOf="@+id/btnResources"
+        app:layout_constraintEnd_toEndOf="@+id/btnExercise"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnResources"
-        app:layout_constraintTop_toBottomOf="@+id/btnResources"
+        app:layout_constraintStart_toStartOf="@+id/btnExercise"
+        app:layout_constraintTop_toBottomOf="@+id/btnExercise"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
 
     <soup.neumorphism.NeumorphButton
@@ -80,9 +85,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/music"
+        android:text="Focus\nMusic"
+        android:textColor="@color/black"
 
         android:theme="@style/dashBoardItems"
-        app:layout_constraintBottom_toTopOf="@+id/btnExercise"
+        app:layout_constraintBottom_toTopOf="@+id/btnProTips"
         app:layout_constraintEnd_toEndOf="@+id/btnMilestone"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/btnMilestone"
@@ -95,6 +102,8 @@
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/gallery"
         android:theme="@style/dashBoardItems"
+        android:text="Motivational\nWallpapers"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnBucketlist"
         app:layout_constraintHorizontal_bias="0.5"
@@ -103,11 +112,13 @@
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
 
     <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnExercise"
+        android:id="@+id/btnProTips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/exercise"
+        android:drawableTop="@drawable/bulb"
         android:theme="@style/dashBoardItems"
+        android:text="Success\nMantras"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnSoftMusic"
         app:layout_constraintHorizontal_bias="0.5"

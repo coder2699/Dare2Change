@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".Exercise.StartExerciseFragment">
@@ -10,15 +11,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exercise"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteShade"
+            app:title="Exercises That Increase"
+            app:titleTextAppearance="@style/ToolbarTheme"
+
+            app:titleTextColor="@color/colorPrimaryDark" />
+
+    </com.google.android.material.appbar.AppBarLayout>
     <TableLayout
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
@@ -32,17 +41,21 @@
             android:layout_marginEnd="32dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/ex1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ex_a" />
+                android:padding="20dp"
+                android:src="@drawable/ex_a"
+                android:elevation="5dp"/>
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/ex2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:padding="20dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_b" />
+                android:src="@drawable/ex_b"
+                android:elevation="5dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -53,17 +66,19 @@
             android:layout_marginEnd="32dp">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/ex3"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ex_c" />
+                android:src="@drawable/ex_c"
+                android:elevation="5dp"/>
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/ex4"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_d" />
+                android:src="@drawable/ex_d"
+                android:elevation="5dp" />
         </TableRow>
         <TableRow
             android:layout_marginTop="16dp"
@@ -74,17 +89,20 @@
             android:layout_marginEnd="32dp">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/ex5"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ex_e" />
+                android:padding="20dp"
+                android:src="@drawable/ex_e"
+                android:elevation="5dp"/>
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/ex6"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_f" />
+                android:src="@drawable/ex_f"
+                android:elevation="5dp"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="16dp"
@@ -95,17 +113,20 @@
             android:layout_marginEnd="32dp">
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/ex7"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ex_g" />
+                android:padding="20dp"
+                android:src="@drawable/ex_g"
+                android:elevation="5dp"/>
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/ex8"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_h" />
+                android:src="@drawable/ex_h"
+                android:elevation="5dp" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

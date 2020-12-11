@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
+    <item
         android:id="@+id/dashboardFragment"
         android:icon="@drawable/ic_baseline_home_24"
-        android:iconTint="@color/black"
-        />
-    <item android:title="Blocker"
+        android:title="Home" />
+    <item
         android:id="@+id/blockerFragment"
-            android:icon="@drawable/ic_baseline_app_blocking_24"
-        android:iconTint="@color/black"
-        />
+        android:icon="@drawable/ic_baseline_app_blocking_24"
+        android:title="Blocker" />
 
-    <item android:title="Pro Tip"
+    <item
         android:id="@+id/protipFragment"
+        android:icon="@drawable/ic_protip"
         android:iconTint="@color/black"
-        android:icon="@drawable/ic_protip"/>
+        android:title="Pro Tip" />
 
-    <item android:title="Account"
-        android:id="@+id/accountFragment"
+    <item
+        android:id="@+id/resourceFragment"
+        android:icon="@drawable/ic_resources"
         android:iconTint="@color/black"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        />
+        android:title="Resources" />
 
 </menu>

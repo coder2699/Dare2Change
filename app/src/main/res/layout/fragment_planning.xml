@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ProTips.PlanningFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Plan your day out the night before By giving yourself a heads up on what tomorrow will look like, you’re mentally prepared the moment you wake up ."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/tip1"
+            android:src="@drawable/night" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="When you’re planning your workday, give yourself a realistic window of time for each item and cut yourself off at that window."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tip2"
+            android:src="@drawable/success" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Set an alarm to ring every hour. When it rings, stand up and stretch . Before getting back to work, ask yourself if that last hour was productive?"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip2"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/tip3"
+            android:src="@drawable/alarm" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip3"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip4"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip3"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Accept the fact that you’re not going to be able to do it all in one day."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tip4"
+            android:src="@drawable/calendar_b" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip4"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip5"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Brainstorm a quick to-do list Include everything you need to do, want to do, could do. "
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip4"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/tip5"
+            android:src="@drawable/todo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip5"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip6"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Identify two things that MUST be done today Choose one item from your Work list and one item from your Life list that are your must-dos."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tip6"
+            android:src="@drawable/two" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip6"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip7"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip6"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Follow 80 20 principle. The 80 20 rule is one of the most helpful concepts for life and time management.  "
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip6"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/tip7"
+            android:src="@drawable/twenty" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tip7"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#6C6A6A" />
+
+        <TextView
+            android:id="@+id/tip8"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tip7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Find your ways to beat laziness. There are times when you feel lazy. Find out the root cause and resolve them."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip7"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tip8"
+            android:src="@drawable/lazy" />
+    </RelativeLayout>
+</ScrollView>

@@ -35,9 +35,6 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         binding.btnMilestone.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_startFragment)
         }
-        binding.btnResources.setOnClickListener{
-            findNavController().navigate(R.id.action_dashboardFragment_to_resourceFragment)
-        }
 
         binding.btnMotivation.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_motivationFragment)
@@ -45,6 +42,11 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
         binding.btnExercise.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_startExerciseFragment)
+        }
+
+
+        binding.btnProTips.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_proTipsActivity)
         }
 
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->

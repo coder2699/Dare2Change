@@ -11,17 +11,19 @@
         android:roundIcon="@mipmap/ic_app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
-        <activity android:name=".MyCustomAppIntro"
-            android:label="My Custom AppIntro"></activity>
-        <activity android:name=".ui.auth.AuthActivity">
+        <activity
+            android:name=".MyCustomAppIntro"
+            android:label="My Custom AppIntro" />
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.auth.AuthActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".ProTips.ProTipsActivity" />
     </application>
 
 </manifest>

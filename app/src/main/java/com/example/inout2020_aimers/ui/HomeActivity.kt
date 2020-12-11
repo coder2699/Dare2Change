@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityHomeBinding
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +25,6 @@ class HomeActivity : AppCompatActivity() {
         val navHost = findViewById<View>(R.id.navHostFragmentHome)
 
         binding.bottomNav.setupWithNavController(navHost.findNavController())
-
-
 
     }
 }
