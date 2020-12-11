@@ -13,17 +13,33 @@
         <action
             android:id="@+id/action_dashboardFragment_to_displayFragment"
             app:destination="@id/displayFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
         <action
             android:id="@+id/action_dashboardFragment_to_startFragment"
             app:destination="@id/startFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_dashboardFragment_to_resourceFragment"
-            app:destination="@id/resourceFragment" />
+            app:destination="@id/resourceFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
         <action
             android:id="@+id/action_dashboardFragment_to_motivationFragment"
-            app:destination="@id/motivationFragment" />
+            app:destination="@id/motivationFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -48,7 +64,11 @@
         <action
             android:id="@+id/action_displayFragment_to_addItemFragment"
             app:destination="@id/addItemFragment"
-            app:popUpTo="@id/displayFragment" />
+            app:popUpTo="@id/displayFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
@@ -58,7 +78,11 @@
         <action
             android:id="@+id/action_addItemFragment_to_displayFragment"
             app:destination="@id/displayFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/startFragment"
@@ -68,7 +92,11 @@
         <action
             android:id="@+id/action_startFragment_to_addGoalFragment"
             app:destination="@id/addGoalFragment"
-            app:popUpTo="@id/startFragment" />
+            app:popUpTo="@id/startFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/addGoalFragment"
@@ -78,19 +106,19 @@
         <action
             android:id="@+id/action_addGoalFragment_to_startFragment"
             app:destination="@id/startFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/resourceFragment"
         android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
-        android:label="ResourceFragment" />
+        android:label="ResourceFragment"  />
     <fragment
         android:id="@+id/motivationFragment"
         android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
         android:label="fragment_motivation"
         tools:layout="@layout/fragment_motivation" />
-    android:id="@+id/motivationFragment"
-    android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
-    android:label="fragment_motivation"
-    tools:layout="@layout/fragment_motivation" />
 </navigation>
