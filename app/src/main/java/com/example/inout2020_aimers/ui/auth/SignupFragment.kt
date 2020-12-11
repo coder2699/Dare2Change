@@ -12,6 +12,9 @@ import com.example.inout2020_aimers.ui.HomeActivity
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SignupFragment : Fragment(R.layout.fragment_signup) {
 
@@ -62,21 +65,21 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
                         sendVerificationMail()
 
                         // Setting Display Name for account
-                        val isDisplaynameSet = setDisplayName(userName)
+                        setDisplayName(userName)
 
-                        if (isDisplaynameSet){
-                            findNavController().navigate(R.id.action_signupFragment_to_emailVerificationActivity)
-                        }
-
+                        // Navigation to VerificationFragment
+                        findNavController().navigate(R.id.action_signupFragment_to_emailVerificationActivity)
 
                     }
                     .addOnFailureListener {
+
+                        // Loading UI stopped
+                        UnSetLoading()
+
                         Log.d(TAG, "onViewCreated: Signing up used - > FAILED")
                         Log.d(TAG, "onViewCreated: FAILURE MSG -> ${it.message}")
                         Snacker(view,"${it.message}")
 
-                        // Loading UI stopped
-                        UnSetLoading()
                     }
             }
         }
@@ -86,25 +89,23 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
     }
 
     fun sendVerificationMail(){
-        auth.currentUser!!.sendEmailVerification()
-            .addOnSuccessListener {
-                Log.d(TAG, "onViewCreated: Verification mail sent")
-            }.addOnFailureListener {
-                Log.d(TAG, "onViewCreated: Failed to send verification email")
-            }
+        CoroutineScope(Dispatchers.IO).launch {
+            auth.currentUser!!.sendEmailVerification()
+                .addOnSuccessListener {
+                    Log.d(TAG, "onViewCreated: Verification mail sent")
+                }.addOnFailureListener {
+                    Log.d(TAG, "onViewCreated: Failed to send verification email")
+                }
+        }
     }
 
-    fun setDisplayName(displayName : String): Boolean {
-        var status = false
-        auth.currentUser?.updateProfile(
-            UserProfileChangeRequest.Builder()
-                .setDisplayName(displayName)
-                .build())
-            ?.addOnSuccessListener {
-                status = true
-            }
-        return status
-
+    fun setDisplayName(displayName : String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            auth.currentUser?.updateProfile(
+                UserProfileChangeRequest.Builder()
+                    .setDisplayName(displayName)
+                    .build())
+        }
     }
 
     fun setLoading(){

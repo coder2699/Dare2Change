@@ -68,13 +68,14 @@
             android:hint="Password"
 
             app:boxBackgroundColor="@color/whiteShade"
-            app:endIconMode="clear_text"
+            app:endIconMode="password_toggle"
             app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
 
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPasswordLogin"
+                android:inputType="textWebPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
