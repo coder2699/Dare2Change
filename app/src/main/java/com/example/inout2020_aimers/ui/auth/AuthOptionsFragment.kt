@@ -13,7 +13,6 @@ import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.ActivityHomeBinding
 import com.example.inout2020_aimers.databinding.FragmentAuthOptionsBinding
 import com.example.inout2020_aimers.ui.HomeActivity
-import com.example.inout2020_aimers.utils.SecretKeys.Companion.GOOGLE_WEB_ID
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -88,12 +87,7 @@ class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
                 startActivityForResult(it,GOOGLE_SIGNIN_REQUEST_CODE)
             }
 
-
-
         }
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

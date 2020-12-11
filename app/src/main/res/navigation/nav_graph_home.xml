@@ -9,15 +9,37 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.inout2020_aimers.ui.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
+        tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_displayFragment"
             app:destination="@id/displayFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
         <action
             android:id="@+id/action_dashboardFragment_to_startFragment"
             app:destination="@id/startFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_resourceFragment"
+            app:destination="@id/resourceFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
+        <action
+            android:id="@+id/action_dashboardFragment_to_motivationFragment"
+            app:destination="@id/motivationFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -38,40 +60,65 @@
         android:id="@+id/displayFragment"
         android:name="com.example.inout2020_aimers.bucket.BucketList.DisplayFragment"
         android:label="fragment_display"
-        tools:layout="@layout/fragment_display" >
+        tools:layout="@layout/fragment_display">
         <action
             android:id="@+id/action_displayFragment_to_addItemFragment"
             app:destination="@id/addItemFragment"
-            app:popUpTo="@id/displayFragment" />
+            app:popUpTo="@id/displayFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
         android:name="com.example.inout2020_aimers.bucket.BucketList.AddItemFragment"
         android:label="fragment_add_item"
-        tools:layout="@layout/fragment_add_item" >
+        tools:layout="@layout/fragment_add_item">
         <action
             android:id="@+id/action_addItemFragment_to_displayFragment"
             app:destination="@id/displayFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.inout2020_aimers.Milestones.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
+        tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_startFragment_to_addGoalFragment"
             app:destination="@id/addGoalFragment"
-            app:popUpTo="@id/startFragment" />
+            app:popUpTo="@id/startFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/addGoalFragment"
         android:name="com.example.inout2020_aimers.Milestones.AddGoalFragment"
         android:label="fragment_add_goal"
-        tools:layout="@layout/fragment_add_goal" >
+        tools:layout="@layout/fragment_add_goal">
         <action
             android:id="@+id/action_addGoalFragment_to_startFragment"
             app:destination="@id/startFragment"
-            app:popUpTo="@id/dashboardFragment" />
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
+        android:label="ResourceFragment"  />
+    <fragment
+        android:id="@+id/motivationFragment"
+        android:name="com.example.inout2020_aimers.Motivation.Fragment.MotivationFragment"
+        android:label="fragment_motivation"
+        tools:layout="@layout/fragment_motivation" />
 </navigation>
