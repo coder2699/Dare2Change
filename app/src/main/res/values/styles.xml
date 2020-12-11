@@ -30,7 +30,11 @@
     <style name="dashBoardItems">
         <item name="android:padding">30dp</item>
     </style>
-
+    
+    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
 
 
 

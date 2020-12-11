@@ -8,6 +8,7 @@ import com.google.firebase.FirebaseApp
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_auth)
 
         FirebaseApp.initializeApp(applicationContext)

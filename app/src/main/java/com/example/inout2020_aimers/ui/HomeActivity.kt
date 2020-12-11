@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
-
+        setTheme(R.style.AppTheme)
         setContentView(view)
         val navHost = findViewById<View>(R.id.navHostFragmentHome)
 
