@@ -26,7 +26,7 @@
             android:rowCount="5">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -48,21 +48,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Know where you want to go in life."
+                        android:text="Know where you want\nto go in life."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:src="@drawable/flag" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Setting goals guides your focus and helps you sustain that momentum in life."
+                        android:text="Setting goals guides\nyour focus and helps you\nsustain that momentum in\nlife."
                         android:textColor="#000000"
                         android:textSize="11sp"
                         android:textStyle="italic" />
@@ -70,7 +70,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -91,14 +91,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Healthy mind is a happy mind."
+                        android:text="Healthy mind is a happy\nmind."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/diet" />
 
@@ -106,7 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Your diet definitely has a big impact on your brain health."
+                        android:text="Your diet definitely has a\nbig impact on your brain\nhealth."
                         android:textColor="#000000"
                         android:textSize="11sp"
                         android:textStyle="italic" />
@@ -128,7 +128,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -149,14 +149,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="75% of Brain is water - Drink a lot of it."
+                        android:text="75% of Brain is water -\nDrink a lot of it."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/water" />
 
@@ -164,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Brain is strongly influenced by your hydration status."
+                        android:text="Brain is strongly influenced\nby your hydration status."
                         android:textColor="#000000"
                         android:textSize="11sp"
                         android:textStyle="italic" />
@@ -174,7 +174,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -195,21 +195,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Have a sound sleep - 8 hrs daily."
+                        android:text="Have a sound sleep - 8\nhrs daily."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:src="@drawable/sleep" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="It strongly influences our capacity to recover both mentally and physically."
+                        android:text="It strongly influences\nour capacity to recover both \nmentally and physically."
                         android:textColor="#000000"
                         android:textSize="11sp"
                         android:textStyle="italic" />
@@ -231,7 +231,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -252,14 +252,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Daily learn something new"
+                        android:text="Daily learn \nsomething new"
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/learn" />
 
@@ -267,7 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Knowledge is power. When you have knowledge, you have the power to achieve many things. "
+                        android:text="Knowledge is power. \nWhen you have \nknowledge, you have \nthe power to \nachieve many things. "
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
@@ -275,7 +275,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -302,8 +302,8 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/exercise" />
 
@@ -311,7 +311,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Mind are so closely linked, when your body feels better so, too, will your mind."
+                        android:text="Mind are so closely \nlinked, when your \nbody feels better so, \ntoo, will your mind."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
@@ -332,7 +332,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -359,8 +359,8 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/deadline" />
 
@@ -368,7 +368,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="If you want to get more out of your life, then stop dreaming and start taking actions today, not tomorrow."
+                        android:text="If you want to get \nmore out of your life\n, then stop dreaming \nand start taking \nactions today, not \ntomorrow."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
@@ -376,7 +376,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -403,8 +403,8 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/positive" />
 
@@ -412,7 +412,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="A positive attitude will help you think of what you are doing as important, which is a great way to stay motivated and working toward a goal."
+                        android:text="A positive attitude \nwill help you think of \nwhat you are doing \nas important, which \nis a great way to \nstay motivated and \nworking toward a \ngoal."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
@@ -433,7 +433,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -460,8 +460,8 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:padding="10dp"
                         android:src="@drawable/quit" />
 
@@ -469,7 +469,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="High achievers are tenacious, sticking to their plans and goals as long as they need to in order to get where they want to be."
+                        android:text="High achievers are \ntenacious, sticking to \ntheir plans and goals \nas long as they need \nto in order to get \nwhere they want to be."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
@@ -477,7 +477,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -498,22 +498,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Erase out anxieties and stress-causing worries. "
+                        android:text="Erase out anxieties \nand stress-causing \nworries. "
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:padding="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="0dp"
                         android:src="@drawable/stress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Wipeout all the stress-causing triggers from the mind."
+                        android:text="Wipeout all the stress-causing \ntriggers from \nthe mind."
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="italic" />
