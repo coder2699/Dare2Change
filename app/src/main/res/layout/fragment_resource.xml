@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/whiteShade"
-            app:title="Self-Help Books"
+            app:title="Useful Resources"
             app:titleTextAppearance="@style/ToolbarTheme"
 
             app:titleTextColor="@color/colorPrimaryDark" />

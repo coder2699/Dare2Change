@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/whiteShade"
-            app:title="Exercises That Increase"
+            app:title="Exercises To Enhance Concentration"
             app:titleTextAppearance="@style/ToolbarTheme"
 
             app:titleTextColor="@color/colorPrimaryDark" />
