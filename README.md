@@ -13,18 +13,10 @@
 
 ## About The Project
 
- <i>A Multipurpose Android App For The Students!</i>
+ <i>A Multipurpose Android App to Increase your Productivity!</i>
 
-> 
-Dare2Change is an android application for the students. It keeps its users stay focused, positive, motivated towards their goal.
-Our app provides free available e-books/blogs making available most of the books with just one click. It also provides a bucket list in which you can set your tasks
-in a time-bound manner.
-Many of us instead of setting our goals unable to review our progress and the milestones we have achieved. DareToChange app solves this purpose.
-Our app provides the best motivational quotes/wallpapers for the students who feel demotivated, less enthusiastic, & underconfident in this competitive world.
-It provides a music feature which soft and calms our mood and makes us keep energetic toward achieving our goals.
-Our app provides some easy and simple exercises which make our body fit, as a result, we feel more focused and productive.
- 
- 
+Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you can set your goals, divide them into sub-goals, prioritize your plans and learn new ways to enhance your performance.
+
  <p>Application is available here:-</p>
 <p></p>
 <p><a href="">Download Apk file</a></p>
