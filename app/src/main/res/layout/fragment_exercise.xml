@@ -16,7 +16,8 @@
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
             android:text="Mountain Pose"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:fontFamily="@font/montserrat_medium"
             android:layout_marginTop="15dp"/>
         <ImageView
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
+            android:gravity="center"
             android:src="@drawable/ex_cc"
             android:layout_below="@id/head"
             android:id="@+id/demo"/>
