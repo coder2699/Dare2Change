@@ -105,13 +105,9 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
   </tr> -->
  </table>
 
-## Contribute
-
 <p><h2><a id="index7"></a>Contribute</h2></p>
 <p>Contributions are always welcome! Please create a PR to add Github Profile.</p>
 
-
-## Show your support
 
 <p><h2><a id="index8"></a>Show your support</h2></p>
 <p>Give a <g-emoji class="g-emoji" alias="star" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png">⭐️</g-emoji> if this project helped you!</p>
