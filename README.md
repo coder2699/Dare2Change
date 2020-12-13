@@ -74,24 +74,24 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
 <p><h2><a id="index6"></a>App Screenshots</h2></p>
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101980982-58a30280-3c8f-11eb-851b-0e70df006416.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981044-00b8cb80-3c90-11eb-860d-b1a7d7ebd3b9.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981055-162df580-3c90-11eb-837b-1ec912624e77.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102006991-3d95c880-3d4b-11eb-9aff-29f02dde6885.jpg"  width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007046-a5e4aa00-3d4b-11eb-9b14-914dd1337ec3.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007062-cad91d00-3d4b-11eb-82a3-72c1a04f2e1a.jpg" width=270 height=480></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981088-5f7e4500-3c90-11eb-888e-ce86575dc4d0.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981119-948a9780-3c90-11eb-9f7d-e80d99738f3e.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981136-b8e67400-3c90-11eb-9b55-1784697216d8.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007092-0ecc2200-3d4c-11eb-9da6-549b04d9e0c2.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007084-f9ef8e80-3d4b-11eb-9184-eb93853737b5.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007075-e80deb80-3d4b-11eb-9c18-ee87e3f77439.jpg" width=270 height=480></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981183-04991d80-3c91-11eb-8575-2e9494f76e19.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981149-d3b8e880-3c90-11eb-9dae-c2e78d01c457.png" width=270 height=480></td> 
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981203-1f6b9200-3c91-11eb-983c-bb2f39bae122.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007099-38854900-3d4c-11eb-8059-1f2e0970b101.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007103-4cc94600-3d4c-11eb-94ca-1285aef39abb.jpg" width=270 height=480></td> 
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007117-6074ac80-3d4c-11eb-9001-02b4f2c4a57b.jpg" width=270 height=480></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981217-3a3e0680-3c91-11eb-9096-15c81461070b.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981230-4de96d00-3c91-11eb-978b-1963f93582ae.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/69961631/101981237-5f327980-3c91-11eb-842d-fb4107341af4.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007127-71bdb900-3d4c-11eb-9bd9-c4bc1c3397e3.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007140-8d28c400-3d4c-11eb-9719-dcd51df266cc.jpg" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007163-a29dee00-3d4c-11eb-89ec-0d56bd18229f.jpg" width=270 height=480></td>
   </tr>
 <!-- <tr>
     <td><img src="" width=270 height=480></td>
