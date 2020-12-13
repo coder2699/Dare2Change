@@ -52,7 +52,6 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
 <p><h2><a id="index3"></a>Tech Used</h2></p>
 
 - Android Development
-- Java
 - Kotlin
 - XML
 - Android Studio
