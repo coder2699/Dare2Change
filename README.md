@@ -3,9 +3,10 @@
 # Dare2Change
 ### Decide. Dare. Done
 
-[![GitHub contributors](https://img.shields.io/badge/contributors-4-yellow)](https://github.com/coder2699/inOut2020-Aimers/graphs/contributors)     [![GitHub issues](https://img.shields.io/github/issues/inOut2020-Aimers)](https://github.com/coder2699/inOut2020-Aimers/issues/)      [![ABCD](https://img.shields.io/badge/development-passing-brightgreen)](https://img.shields.io/badge/development-passing-brightgreen) 
-[![ABCD](https://img.shields.io/badge/App-Sample-yellow)](https://img.shields.io/badge/App-Sample-yellow) 
-[![ABCD](https://img.shields.io/badge/repo%20size-8.54MB-blue)](https://img.shields.io/badge/repo%20size-8.54MB-blue) 
+[![GitHub contributors](https://img.shields.io/badge/contributors-4-yellow)](https://github.com/coder2699/inOut2020-Aimers/graphs/contributors)     
+[![GitHub issues](https://img.shields.io/github/issues/HAC-2020/Aimers)](https://github.com/coder2699/inOut2020-Aimers/issues/)
+[![ABCD](https://img.shields.io/badge/development-passing-brightgreen)](https://img.shields.io/badge/development-passing-brightgreen) 
+[![ABCD](https://img.shields.io/badge/APK%20size-8.54MB-blue)](https://img.shields.io/badge/repo%20size-8.54MB-blue) 
 [![ABCD](https://img.shields.io/badge/Min%20API-21-blue)](https://img.shields.io/badge/Min%20API-21-blue/) 
 
 [![ForTheBadge built-for-android](https://forthebadge.com/images/badges/built-for-android.svg)
