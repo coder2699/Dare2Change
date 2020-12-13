@@ -3,12 +3,13 @@
 # Dare2Change
 ### Decide. Dare. Done
 
-[![GitHub contributors](https://img.shields.io/badge/contributors-4-yellow)](https://github.com/coder2699/inOut2020-Aimers/graphs/contributors)     [![GitHub issues](https://img.shields.io/github/issues/HAC-2020/Aimers)](https://github.com/coder2699/inOut2020-Aimers/issues/)      [![ABCD](https://img.shields.io/badge/development-passing-brightgreen)](https://img.shields.io/badge/development-passing-brightgreen) 
+[![GitHub contributors](https://img.shields.io/badge/contributors-4-yellow)](https://github.com/coder2699/inOut2020-Aimers/graphs/contributors)     [![GitHub issues](https://img.shields.io/github/issues/inOut2020-Aimers)](https://github.com/coder2699/inOut2020-Aimers/issues/)      [![ABCD](https://img.shields.io/badge/development-passing-brightgreen)](https://img.shields.io/badge/development-passing-brightgreen) 
 [![ABCD](https://img.shields.io/badge/App-Sample-yellow)](https://img.shields.io/badge/App-Sample-yellow) 
 [![ABCD](https://img.shields.io/badge/repo%20size-8.54MB-blue)](https://img.shields.io/badge/repo%20size-8.54MB-blue) 
 [![ABCD](https://img.shields.io/badge/Min%20API-21-blue)](https://img.shields.io/badge/Min%20API-21-blue/) 
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/HAC-2020/Aimers)
+[![ForTheBadge built-for-android](https://forthebadge.com/images/badges/built-for-android.svg)
+[![ForTheBadge built-with-swag](https://forthebadge.com/images/badges/built-with-swag.svg)](https://github.com/inOut2020-Aimers)
 [![ForTheBadge makes-people-smile](http://ForTheBadge.com/images/badges/makes-people-smile.svg)](http://ForTheBadge.com)
 
 
@@ -39,9 +40,8 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
 
  <p>Application is available here:-</p>
 <p></p>
-<p><a href="">Download Apk file</a></p>
-<p><a href="">Power Point Presentation</a></p>
-<p><a href="">See Working of app</a></p>
+<p><a href="https://drive.google.com/file/d/1_sUDV08UyTjyI2_om6orjJ29bDpnmvE4/view?usp=sharing">Download Apk file</a></p>
+<p><a href="https://www.youtube.com/watch?v=ZCFX_i6U08M">See Working of app</a></p>
 
 
 <p><h2><a id="index2"></a>How To SetUp</h2></p>
@@ -55,7 +55,7 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
 - Kotlin
 - XML
 - Android Studio
-- Firestore
+- SQLite
 
 
 <p><h2><a id="index4"></a>Permissions</h2></p>
@@ -95,20 +95,10 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
   <tr>
     <td><img src="https://user-images.githubusercontent.com/58500214/102007213-04f6ee80-3d4d-11eb-859a-c89780128e32.jpg" width=270 height=480></td>
   </tr>
-<!-- <tr>
-    <td><img src="" width=270 height=480></td>
-    <td><img src="" width=270 height=480></td>
-    <td><img src="" width=270 height=480></td>
-  </tr>
-<tr>
-    <td><img src="" width=270 height=480></td>
-    <td><img src="" width=270 height=480></td>
-    <td><img src="" width=270 height=480></td>
-  </tr> -->
  </table>
 
 <p><h2><a id="index7"></a>Contribute</h2></p>
-<p>Contributions are always welcome! Please create a PR to add Github Profile.</p>
+<p>Contributions are always welcome! Please create a PR to make a contribution.</p>
 
 
 <p><h2><a id="index8"></a>Show your support</h2></p>
