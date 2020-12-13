@@ -93,6 +93,9 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
     <td><img src="https://user-images.githubusercontent.com/58500214/102007140-8d28c400-3d4c-11eb-9719-dcd51df266cc.jpg" width=270 height=480></td>
     <td><img src="https://user-images.githubusercontent.com/58500214/102007163-a29dee00-3d4c-11eb-89ec-0d56bd18229f.jpg" width=270 height=480></td>
   </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/58500214/102007213-04f6ee80-3d4d-11eb-859a-c89780128e32.jpg" width=270 height=480></td>
+  </tr>
 <!-- <tr>
     <td><img src="" width=270 height=480></td>
     <td><img src="" width=270 height=480></td>
