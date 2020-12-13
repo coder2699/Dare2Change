@@ -22,9 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/whiteShade"
-            app:title="Exercises To Enhance Concentration"
+            app:title="Enhance Concentration"
             app:titleTextAppearance="@style/ToolbarTheme"
-
             app:titleTextColor="@color/colorPrimaryDark" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -101,7 +100,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_f"
+                android:src="@drawable/ex_ff"
                 android:elevation="5dp"/>
         </TableRow>
         <TableRow
