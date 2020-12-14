@@ -36,17 +36,12 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
             findNavController().navigate(R.id.action_dashboardFragment_to_startFragment)
         }
 
-        binding.btnMotivation.setOnClickListener{
-            findNavController().navigate(R.id.action_dashboardFragment_to_motivationFragment)
-        }
-
-        binding.btnExercise.setOnClickListener{
-            findNavController().navigate(R.id.action_dashboardFragment_to_startExerciseFragment)
-        }
-
 
         binding.btnProTips.setOnClickListener{
             findNavController().navigate(R.id.action_dashboardFragment_to_proTipsActivity)
+        }
+        binding.btnWeeklyPlanner.setOnClickListener{
+            findNavController().navigate(R.id.action_dashboardFragment_to_weekFragment)
         }
 
         binding.toolbarDashboard.setOnMenuItemClickListener { menuItem->

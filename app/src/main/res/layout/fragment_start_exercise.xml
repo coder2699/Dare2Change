@@ -41,16 +41,18 @@
 
             <ImageView
                 android:id="@+id/ex1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:padding="20dp"
                 android:src="@drawable/ex_a"
                 android:elevation="5dp"/>
 
             <ImageView
                 android:id="@+id/ex2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="5dp"
                 android:padding="20dp"
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ex_b"
@@ -66,15 +68,16 @@
 
             <ImageView
                 android:id="@+id/ex3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:src="@drawable/ex_c"
                 android:elevation="5dp"/>
 
             <ImageView
                 android:id="@+id/ex4"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_gravity="end"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ex_d"
                 android:elevation="5dp" />
@@ -89,18 +92,20 @@
 
             <ImageView
                 android:id="@+id/ex5"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:padding="20dp"
                 android:src="@drawable/ex_e"
                 android:elevation="5dp"/>
 
             <ImageView
                 android:id="@+id/ex6"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ex_ff"
+                android:layout_gravity="end"
                 android:elevation="5dp"/>
         </TableRow>
         <TableRow
@@ -113,16 +118,17 @@
 
             <ImageView
                 android:id="@+id/ex7"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:padding="20dp"
                 android:src="@drawable/ex_g"
                 android:elevation="5dp"/>
 
             <ImageView
                 android:id="@+id/ex8"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="end"
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ex_h"
                 android:elevation="5dp" />

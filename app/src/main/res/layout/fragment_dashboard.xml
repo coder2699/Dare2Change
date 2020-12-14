@@ -4,129 +4,215 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.DashboardFragment">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/whiteShade">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+
+    <RelativeLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteShade">
 
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbarDashboard"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/whiteShade"
-            app:title="@string/app_name"
-            app:titleTextAppearance="@style/ToolbarTheme"
 
-            app:titleTextColor="@color/colorPrimaryDark" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteShade"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/ToolbarTheme"
 
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnExercise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:drawableTop="@drawable/exercise"
-        android:theme="@style/dashBoardItems"
-        android:text="Refresh\nYourself"
-        android:textColor="@color/black"
+                app:titleTextColor="@color/colorPrimaryDark" />
 
-
-        app:layout_constraintBottom_toTopOf="@+id/btnBucketlist"
-        app:layout_constraintEnd_toStartOf="@+id/btnMilestone"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnMilestone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:drawableTop="@drawable/map"
-        android:theme="@style/dashBoardItems"
-        android:text="\nMilestones"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnSoftMusic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnExercise"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnBucketlist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/bucket"
-        android:theme="@style/dashBoardItems"
-        android:text="Your\nBucket List"
-        android:textColor="@color/black"
-
-        app:layout_constraintBottom_toTopOf="@+id/btnMotivation"
-        app:layout_constraintEnd_toEndOf="@+id/btnExercise"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnExercise"
-        app:layout_constraintTop_toBottomOf="@+id/btnExercise"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnSoftMusic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/music"
-        android:text="Focus\nMusic"
-        android:textColor="@color/black"
-
-        android:theme="@style/dashBoardItems"
-        app:layout_constraintBottom_toTopOf="@+id/btnProTips"
-        app:layout_constraintEnd_toEndOf="@+id/btnMilestone"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnMilestone"
-        app:layout_constraintTop_toBottomOf="@+id/btnMilestone"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnMotivation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/gallery"
-        android:theme="@style/dashBoardItems"
-        android:text="Motivational\nWallpapers"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnBucketlist"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnBucketlist"
-        app:layout_constraintTop_toBottomOf="@+id/btnBucketlist"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/btnProTips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/bulb"
-        android:theme="@style/dashBoardItems"
-        android:text="Success\nMantras"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnSoftMusic"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnSoftMusic"
-        app:layout_constraintTop_toBottomOf="@+id/btnSoftMusic"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnMilestone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/headMilestone"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Milestones"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/descMilestone"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headMilestone"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="center"
+                    android:text="Decide Your Goals\n Divide it into Sub-Goals"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/imgMilestone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/headMilestone"
+                    android:padding="5dp"
+                    android:src="@drawable/map" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBucketlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnMilestone"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/headBucket"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Your Bucket List"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/descBucket"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headBucket"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="center"
+                    android:text="Add items you want\n to accomplish"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/imgBucket"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/headBucket"
+                    android:padding="5dp"
+                    android:src="@drawable/bucket" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnWeeklyPlanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBucketlist"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/headWeek"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Weekly Planner"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/descWeek"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headWeek"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="center"
+                    android:text="Plan your week ahead.\n Make it a productive week !"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/imgWeek"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/headWeek"
+                    android:padding="15dp"
+                    android:src="@drawable/weekly" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnProTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_protip"
+            android:tint="@color/black"
+            app:backgroundTint="@color/colorPrimary" />
+
+
+    </RelativeLayout>
 </ScrollView>

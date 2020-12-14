@@ -75,7 +75,7 @@ class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
 
         // Google SignUp
         binding.btnGoogleSignin.setOnClickListener {
-
+            
             val googleOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(GOOGLE_WEB_ID)
                 .requestEmail()
