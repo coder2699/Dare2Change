@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/motivationFragment"
-        android:icon="@drawable/ic_motivation"
-        android:title="Inspiring Wall" />
-
-    <item
         android:id="@+id/dashboardFragment"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
-        android:id="@+id/startExerciseFragment"
-        android:icon="@drawable/exercise"
+        android:id="@+id/blockerFragment"
+        android:icon="@drawable/ic_baseline_app_blocking_24"
+        android:title="Blocker" />
+
+    <item
+        android:id="@+id/weekFragment"
+        android:icon="@drawable/calendar"
         android:iconTint="@color/black"
-        android:title="Refresh Yourself" />
+        android:title="Weekly Planner" />
 
     <item
         android:id="@+id/resourceFragment"
