@@ -24,11 +24,13 @@
                 android:layout_marginEnd="32dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center|start"
+                    android:layout_weight="1"
+
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_gravity="center|start"
                     android:layout_margin="12dp"
                     android:background="#FFFFFF"
                     android:elevation="6dp"
@@ -45,7 +47,7 @@
                         android:padding="8dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Know where you want\nto go in life."
@@ -59,7 +61,7 @@
                             android:src="@drawable/flag" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Setting goals guides\nyour focus and helps you\nsustain that momentum in\nlife."
@@ -70,13 +72,12 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
                     android:layout_gravity="center|right"
                     android:layout_margin="12dp"
                     android:elevation="6dp"
+                    android:layout_weight="1"
                     app:cardCornerRadius="12dp">
 
                     <LinearLayout
@@ -89,7 +90,7 @@
                         android:padding="8dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Healthy mind is a happy\nmind."
@@ -104,7 +105,7 @@
                             android:src="@drawable/diet" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Your diet definitely has a\nbig impact on your brain\nhealth."
@@ -125,10 +126,12 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_gravity="center|start"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:layout_margin="12dp"
                     android:elevation="6dp"
                     app:cardCornerRadius="12dp">
@@ -143,7 +146,7 @@
                         android:padding="8dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="75% of Brain is water -\nDrink a lot of it."
@@ -158,7 +161,7 @@
                             android:src="@drawable/water" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Brain is strongly influenced\nby your hydration status."
@@ -171,7 +174,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -190,7 +194,7 @@
                         android:padding="8dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Have a sound sleep - 8\nhrs daily."
@@ -204,7 +208,7 @@
                             android:src="@drawable/sleep" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="It strongly influences\nour capacity to recover both \nmentally and physically."
@@ -225,10 +229,12 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_gravity="center|start"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:layout_margin="12dp"
                     android:elevation="6dp"
                     app:cardCornerRadius="12dp">
@@ -243,7 +249,7 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Daily learn \nsomething new"
@@ -258,7 +264,7 @@
                             android:src="@drawable/learn" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Knowledge is power. \nWhen you have \nknowledge, you have \nthe power to \nachieve many things. "
@@ -269,7 +275,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -281,14 +288,14 @@
                     <LinearLayout
                         android:id="@+id/card6"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Exercise regularly."
@@ -303,7 +310,7 @@
                             android:src="@drawable/exercise" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Mind are so closely \nlinked, when your \nbody feels better so, \ntoo, will your mind."
@@ -322,7 +329,8 @@
                 android:layout_marginEnd="32dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_gravity="center|start"
                     android:layout_rowWeight="1"
@@ -341,7 +349,7 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Don’t Procrastinate"
@@ -356,7 +364,7 @@
                             android:src="@drawable/deadline" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="If you want to get \nmore out of your life\n, then stop dreaming \nand start taking \nactions today, not \ntomorrow."
@@ -367,7 +375,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -386,7 +395,7 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Have Positive Attitude"
@@ -401,7 +410,7 @@
                             android:src="@drawable/positive" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="A positive attitude \nwill help you think of \nwhat you are doing \nas important, which \nis a great way to \nstay motivated and \nworking toward a \ngoal."
@@ -420,7 +429,8 @@
                 android:layout_marginEnd="32dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_gravity="center|start"
                     android:layout_rowWeight="1"
@@ -439,7 +449,7 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Never Quit"
@@ -454,7 +464,7 @@
                             android:src="@drawable/quit" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="High achievers are \ntenacious, sticking to \ntheir plans and goals \nas long as they need \nto in order to get \nwhere they want to be."
@@ -465,7 +475,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -485,7 +496,7 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Erase out anxieties \nand stress-causing \nworries. "
@@ -500,7 +511,7 @@
                             android:src="@drawable/stress" />
 
                         <TextView
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Wipeout all the stress-causing \ntriggers from \nthe mind."
