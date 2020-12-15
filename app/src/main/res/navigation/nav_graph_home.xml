@@ -143,10 +143,23 @@
     <fragment
         android:id="@+id/resourceFragment"
         android:name="com.example.inout2020_aimers.Resources.ResourceFragment"
-        android:label="ResourceFragment" />
+        android:label="ResourceFragment" >
+        <action
+            android:id="@+id/action_resourceFragment_to_resourceWebFragment"
+            app:destination="@id/resourceWebFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="com.example.inout2020_aimers.Exercise.ExerciseFragment"
         android:label="fragment_exercise"
         tools:layout="@layout/fragment_exercise" />
+    <fragment
+        android:id="@+id/resourceWebFragment"
+        android:name="com.example.inout2020_aimers.Resources.ResourceWebFragment"
+        android:label="fragment_resource_web"
+        tools:layout="@layout/fragment_resource_web" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
 </navigation>
