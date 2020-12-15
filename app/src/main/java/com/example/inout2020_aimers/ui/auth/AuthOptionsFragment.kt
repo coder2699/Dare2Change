@@ -4,27 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentAuthOptionsBinding
 import com.example.inout2020_aimers.ui.HomeActivity
-import com.example.inout2020_aimers.utils.SecretKeys.Companion.GOOGLE_WEB_ID
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.lang.Exception
-
 
 class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
     private  val TAG = "AuthOptionsFragment"

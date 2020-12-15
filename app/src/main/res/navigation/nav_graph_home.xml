@@ -51,11 +51,6 @@
             app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
-        android:id="@+id/protipFragment"
-        android:name="com.example.inout2020_aimers.ui.ProtipFragment"
-        android:label="fragment_protip"
-        tools:layout="@layout/fragment_protip" />
-    <fragment
         android:id="@+id/blockerFragment"
         android:name="com.example.inout2020_aimers.ui.BlockerFragment"
         android:label="fragment_blocker"
@@ -162,4 +157,9 @@
             android:name="url"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/weekFragment"
+        android:name="com.example.inout2020_aimers.WeeklyPlanner.WeekFragment"
+        android:label="fragment_week"
+        tools:layout="@layout/fragment_week" />
 </navigation>
