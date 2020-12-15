@@ -3,16 +3,22 @@ package com.example.inout2020_aimers.bucket.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inout2020_aimers.bucket.Database.Bucket
 import com.example.inout2020_aimers.bucket.Database.ListViewModel
 import com.example.inout2020_aimers.databinding.ItemBucketBinding
+import co.mobiwise.materialintro.shape.Focus
+import co.mobiwise.materialintro.shape.FocusGravity
+import co.mobiwise.materialintro.shape.ShapeType
+import co.mobiwise.materialintro.view.MaterialIntroView
 
 class BucketListAdapter(
     val listViewModel: ListViewModel,
-    val parentView: View
+    val parentView: View,
+    val activity: FragmentActivity?
 ) :
     ListAdapter<Bucket, BucketListAdapter.ViewHolder>(
         ListDiffCallbacks()
@@ -29,6 +35,9 @@ class BucketListAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item, listViewModel)
+        if (position == 0) {
+            introDelete(holder.binding.itemText)
+        }
     }
 
     class ViewHolder(val binding: ItemBucketBinding) :
@@ -65,5 +74,20 @@ class BucketListAdapter(
         notifyItemChanged(position)
         listViewModel.insert(bucket)
     }
-
+    private fun introDelete(view: View) {
+        MaterialIntroView.Builder(activity)
+            .enableDotAnimation(false)
+            .enableIcon(true)
+            .setFocusGravity(FocusGravity.RIGHT)
+            .setFocusType(Focus.MINIMUM)
+            .setDelayMillis(400)
+            .enableFadeAnimation(true)
+            .performClick(false)
+            .dismissOnTouch(true)
+            .setInfoText("Slide the item towards left to delete it")
+            .setShape(ShapeType.CIRCLE)
+            .setTarget(view)
+            .setUsageId("intro_card_5") // THIS SHOULD BE UNIQUE ID
+            .show()
+    }
 }

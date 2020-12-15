@@ -12,6 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import co.mobiwise.materialintro.shape.Focus
+import co.mobiwise.materialintro.shape.FocusGravity
+import co.mobiwise.materialintro.shape.ShapeType
+import co.mobiwise.materialintro.view.MaterialIntroView
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.bucket.Adapter.BucketListAdapter
 import com.example.inout2020_aimers.bucket.Database.Bucket
@@ -34,8 +38,8 @@ class DisplayFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentDisplayBinding.inflate(inflater, container, false)
         listViewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
-        bucketListAdapter = BucketListAdapter(listViewModel, binding.rv.rootView)
-
+        bucketListAdapter = BucketListAdapter(listViewModel, binding.rv.rootView,activity)
+        introFab()
         binding.rv.adapter = bucketListAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)
         enableSwipeToDeleteAndUndo(bucketListAdapter)
@@ -83,6 +87,22 @@ class DisplayFragment : Fragment() {
 
         val itemTouchhelper = ItemTouchHelper(swipeToDeleteCallback)
         itemTouchhelper.attachToRecyclerView(binding.rv)
+    }
+    private fun introFab() {
+        MaterialIntroView.Builder(activity)
+            .enableDotAnimation(false)
+            .enableIcon(true)
+            .setFocusGravity(FocusGravity.CENTER)
+            .setFocusType(Focus.ALL)
+            .setDelayMillis(500)
+            .enableFadeAnimation(true)
+            .performClick(false)
+            .dismissOnTouch(true)
+            .setInfoText("Click the + sign to add a new item in your bucket")
+            .setShape(ShapeType.CIRCLE)
+            .setTarget(binding.floatingActionButton)
+            .setUsageId("intro_card_6") // THIS SHOULD BE UNIQUE ID
+            .show()
     }
 
 }

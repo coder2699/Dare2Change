@@ -12,6 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import co.mobiwise.materialintro.shape.Focus
+import co.mobiwise.materialintro.shape.FocusGravity
+import co.mobiwise.materialintro.shape.ShapeType
+import co.mobiwise.materialintro.view.MaterialIntroView
 import com.example.inout2020_aimers.Milestones.Adapter.GoalsAdapter
 import com.example.inout2020_aimers.Milestones.Database.Goals
 import com.example.inout2020_aimers.Milestones.Database.GoalsViewModel
@@ -34,8 +38,8 @@ class StartFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentStartBinding.inflate(inflater, container, false)
         goalsViewModel = ViewModelProviders.of(this).get(GoalsViewModel::class.java)
-        goalsAdapter = GoalsAdapter(goalsViewModel, binding.rv.rootView)
-
+        goalsAdapter = GoalsAdapter(goalsViewModel, binding.rv.rootView, activity)
+        introFab()
         binding.rv.adapter = goalsAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)
         enableSwipeToDeleteAndUndo(goalsAdapter)
@@ -84,5 +88,20 @@ class StartFragment : Fragment() {
         val itemTouchhelper = ItemTouchHelper(swipeToDeleteCallback)
         itemTouchhelper.attachToRecyclerView(binding.rv)
     }
-
+    private fun introFab() {
+        MaterialIntroView.Builder(activity)
+            .enableDotAnimation(false)
+            .enableIcon(true)
+            .setFocusGravity(FocusGravity.CENTER)
+            .setFocusType(Focus.ALL)
+            .setDelayMillis(500)
+            .enableFadeAnimation(true)
+            .performClick(false)
+            .dismissOnTouch(true)
+            .setInfoText("Click the + sign to set a new goal")
+            .setShape(ShapeType.CIRCLE)
+            .setTarget(binding.floatingActionButton)
+            .setUsageId("intro_card_1") // THIS SHOULD BE UNIQUE ID
+            .show()
+    }
 }

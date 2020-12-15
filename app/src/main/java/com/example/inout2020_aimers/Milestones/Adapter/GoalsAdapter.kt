@@ -12,10 +12,14 @@ import com.example.inout2020_aimers.Milestones.Database.Goals
 import com.example.inout2020_aimers.Milestones.Database.GoalsViewModel
 import com.example.inout2020_aimers.Milestones.DetailsFragment
 import com.example.inout2020_aimers.databinding.ItemGoalsBinding
-
+import co.mobiwise.materialintro.shape.Focus
+import co.mobiwise.materialintro.shape.FocusGravity
+import co.mobiwise.materialintro.shape.ShapeType
+import co.mobiwise.materialintro.view.MaterialIntroView
 class GoalsAdapter(
     val goalsViewModel: GoalsViewModel,
-    val parentView: View
+    val parentView: View,
+    val activity: FragmentActivity?
 ) :
     ListAdapter<Goals, GoalsAdapter.ViewHolder>(
         ListDiffCallbacks()
@@ -32,6 +36,9 @@ class GoalsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item, goalsViewModel, parentView)
+        if (position == 0) {
+            introDetail(holder.binding.goalCard)
+        }
     }
 
     class ViewHolder(val binding: ItemGoalsBinding) :
@@ -73,5 +80,40 @@ class GoalsAdapter(
         notifyItemChanged(position)
         goalsViewModel.insert(goals)
     }
+    private fun introDelete(view: View) {
+        MaterialIntroView.Builder(activity)
+            .enableDotAnimation(false)
+            .enableIcon(true)
+            .setFocusGravity(FocusGravity.RIGHT)
+            .setFocusType(Focus.MINIMUM)
+            .setDelayMillis(400)
+            .enableFadeAnimation(true)
+            .performClick(false)
+            .dismissOnTouch(true)
+            .setInfoText("Slide the goal towards left to delete it")
+            .setShape(ShapeType.CIRCLE)
+            .setTarget(view)
+            .setUsageId("intro_card") // THIS SHOULD BE UNIQUE ID
+            .show()
+    }
 
+    private fun introDetail(view: View) {
+        MaterialIntroView.Builder(activity)
+            .enableDotAnimation(true)
+            .enableIcon(true)
+            .setFocusGravity(FocusGravity.CENTER)
+            .setFocusType(Focus.NORMAL)
+            .setDelayMillis(400)
+            .enableFadeAnimation(true)
+            .performClick(false)
+            .dismissOnTouch(true)
+            .setInfoText("Click on the goal to get sub-goal details")
+            .setShape(ShapeType.CIRCLE)
+            .setTarget(view)
+            .setUsageId("intro_card_2") // THIS SHOULD BE UNIQUE ID
+            .setListener {
+                introDelete(view)
+            }
+            .show()
+    }
 }
