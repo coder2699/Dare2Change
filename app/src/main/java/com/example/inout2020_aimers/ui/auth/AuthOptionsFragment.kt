@@ -21,7 +21,7 @@ class AuthOptionsFragment : Fragment(R.layout.fragment_auth_options) {
     private lateinit var binding: FragmentAuthOptionsBinding
     private lateinit var auth:FirebaseAuth
     private val GOOGLE_SIGNIN_REQUEST_CODE = 11
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

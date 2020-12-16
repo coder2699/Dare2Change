@@ -12,6 +12,7 @@ import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.WeeklyPlanner.Database.Day
 import com.example.inout2020_aimers.WeeklyPlanner.Database.DayViewModel
 import com.example.inout2020_aimers.databinding.ItemWeekdayBinding
+import com.example.inout2020_aimers.utils.Snacker
 import kotlinx.android.synthetic.main.dialog.view.*
 
 class DayAdapter(
@@ -48,6 +49,7 @@ class DayAdapter(
                     .setView(mDialogView)
                     .setTitle("Add tasks for ${item.dayName}")
                 val mAlertDialog = mBuilder.show()
+                mDialogView.dialogNameEt.setText(item.dayTask)
 
                 mDialogView.dialogCancelBtn.setOnClickListener {
                     mAlertDialog.dismiss()
@@ -56,17 +58,24 @@ class DayAdapter(
                     val task = mDialogView.dialogNameEt.text.toString()
                     item.dayTask = task
                     dayViewModel.update(item)
-                    if (item.dayTask != "")
+                    if (item.dayTask != "") {
                         binding.dayTask.text = item.dayTask
-                    mAlertDialog.dismiss()
+                        mAlertDialog.dismiss()
+                    } else
+                        Snacker(itemView, "This field can't be empty").error()
                 }
+            }
+            binding.itemBin.setOnClickListener {
+                item.dayTask=""
+                dayViewModel.update(item)
+                binding.dayTask.text=item.dayTask
             }
         }
     }
 
     class ListDiffCallbacks : DiffUtil.ItemCallback<Day>() {
         override fun areItemsTheSame(oldItem: Day, newItem: Day): Boolean {
-            return oldItem.dayName == newItem.dayName
+            return oldItem.dayId == newItem.dayId
         }
 
         override fun areContentsTheSame(oldItem: Day, newItem: Day): Boolean {
