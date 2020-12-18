@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/blockerFragment"
-        android:name="com.example.inout2020_aimers.ui.BlockerFragment"
+        android:name="com.example.inout2020_aimers.appblock.BlockerFragment"
         android:label="fragment_blocker"
         tools:layout="@layout/fragment_blocker" />
     <fragment
