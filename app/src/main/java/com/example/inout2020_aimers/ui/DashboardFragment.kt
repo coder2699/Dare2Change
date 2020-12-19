@@ -1,6 +1,8 @@
 package com.example.inout2020_aimers.ui
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -19,10 +21,15 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     private lateinit var binding:FragmentDashboardBinding
     private val TAG = "DashboardFragment"
     private lateinit var auth : FirebaseAuth
+    lateinit var sharedPreferences: SharedPreferences
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        sharedPreferences = context?.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE)!!
+        val editor = sharedPreferences.edit()
+        editor?.putInt("FIRST_RUN",1)
+        editor?.apply()
 
         binding = FragmentDashboardBinding.bind(view)
 

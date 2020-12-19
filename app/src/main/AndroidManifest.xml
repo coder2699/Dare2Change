@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
         <activity
-            android:name=".MyCustomAppIntro"
+            android:name=".ui.HomeActivity"
             android:label="My Custom AppIntro" />
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".MyCustomAppIntro"
+            android:label="My Custom AppIntro" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
