@@ -49,6 +49,14 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_musicPlayerFragment"
+            app:destination="@id/musicPlayerFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"  />
     </fragment>
     <fragment
         android:id="@+id/blockerFragment"
@@ -162,4 +170,9 @@
         android:name="com.example.inout2020_aimers.WeeklyPlanner.WeekFragment"
         android:label="fragment_week"
         tools:layout="@layout/fragment_week" />
+    <fragment
+        android:id="@+id/musicPlayerFragment"
+        android:name="com.example.inout2020_aimers.MusicPlayer.MusicPlayerFragment"
+        android:label="fragment_music_player"
+        tools:layout="@layout/fragment_music_player" />
 </navigation>
