@@ -13,8 +13,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.inout2020_aimers.R
+import com.example.inout2020_aimers.appblock.database.BlockedApps
+import com.example.inout2020_aimers.appblock.database.BlockedAppsRepository
+import com.example.inout2020_aimers.appblock.database.BlockerDatabase
 import com.example.inout2020_aimers.databinding.FragmentBlockerBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
@@ -26,8 +31,40 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
 
     private lateinit var bottomSheetAdapter: AppsAdapter
 
+    private lateinit var viewModel: BlockerViewModel
+
+    private lateinit var blockedAppList : ArrayList<BlockedApps>
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val database = BlockerDatabase(requireActivity().applicationContext)
+        Log.d(TAG, "onCreate: Database created")
+        val repository = BlockedAppsRepository(database)
+
+        val factory = BlockerVMF(repository)
+
+        viewModel = ViewModelProvider(requireActivity(),factory).get(BlockerViewModel::class.java)
+
+        blockedAppList = ArrayList()
+
+        viewModel.getBlockedApps().observe(viewLifecycleOwner, Observer {
+            blockedAppList.clear()
+            blockedAppList.addAll(it)
+            bottomSheetAdapter.notifyDataSetChanged()
+//            Log.d(TAG, "onViewCreated: BlockedAppList -> ${blockedAppList.toString()}")
+            for (app in blockedAppList) {
+                Log.d(TAG, "blockedAppList: App -> ${app.packageName}")
+            }
+            Log.d(TAG, "==========================================================")
+
+            for (app in it) {
+                Log.d(TAG, "it : App -> ${app.packageName}")
+            }
+
+        })
+
 
         binding = FragmentBlockerBinding.bind(view)
 
@@ -37,7 +74,7 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
 
         installedApps = ArrayList()
-        bottomSheetAdapter = AppsAdapter(installedApps)
+        bottomSheetAdapter = AppsAdapter(installedApps,viewModel,blockedAppList)
 
         // BottomSheet RecyclerView Setup
         binding.bmSheet.rvSelectApps.apply {
@@ -62,11 +99,18 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
                         val appName = i.applicationInfo.loadLabel(activity?.packageManager!!).toString()
                         val appPackageName = i.applicationInfo.packageName.toString()
 
+                        var isBlocked = false
+
+                        if (blockedAppList.contains(appPackageName)){
+                            isBlocked = true
+                        }
+
                         installedApps.add(
                             AppListModel(
                                 icon = appIcon,
                                 name = appName,
-                                packageName = appPackageName
+                                packageName = appPackageName,
+                                isBlocked = isBlocked
                             )
                         )
                     } // End For loop

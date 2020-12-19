@@ -2,12 +2,16 @@ package com.example.inout2020_aimers.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.inout2020_aimers.R
+import com.example.inout2020_aimers.appblock.BlockerVMF
+import com.example.inout2020_aimers.appblock.database.BlockedAppsRepository
+import com.example.inout2020_aimers.appblock.database.BlockerDatabase
 import com.example.inout2020_aimers.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
