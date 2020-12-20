@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.inout2020_aimers">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+
 
     <application
         android:allowBackup="true"
@@ -11,9 +17,11 @@
         android:roundIcon="@mipmap/ic_app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
+        <activity android:name=".appblock.blockService.BlockActivity"></activity>
         <activity
-            android:name=".ui.HomeActivity"/>
-        <activity android:name=".MyCustomAppIntro">
+            android:name=".MyCustomAppIntro"
+            android:label="My Custom AppIntro" />
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,9 +32,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ProTips.ProTipsActivity" />
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <service android:name=".appblock.blockService.AppBlockService"
+            android:process=":appblock.blockService.AppBlockService"
+            android:stopWithTask="false" />
     </application>
 
 </manifest>

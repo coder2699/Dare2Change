@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentAuthOptionsBinding
 import com.example.inout2020_aimers.ui.HomeActivity
+import com.example.inout2020_aimers.utils.SecretKeys.Companion.GOOGLE_WEB_ID
 import com.example.inout2020_aimers.utils.Snacker
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
