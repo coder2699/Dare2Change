@@ -6,8 +6,7 @@ import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
+import android.view.View.*
 import android.view.ViewGroup
 import android.widget.SeekBar
 import com.example.inout2020_aimers.R
@@ -108,10 +107,10 @@ class MusicPlayerFragment : Fragment() {
 
     // Method to initialize seek bar and audio stats
     private fun initializeSeekBar() {
-        seek_bar?.max = mediaPlayer.seconds
+        seek_bar.max = mediaPlayer.seconds
 
         runnable = Runnable {
-            seek_bar?.progress = mediaPlayer.currentSeconds
+            seek_bar.progress = mediaPlayer.currentSeconds
             handler.postDelayed(runnable, 1000)
         }
         handler.postDelayed(runnable, 1000)
