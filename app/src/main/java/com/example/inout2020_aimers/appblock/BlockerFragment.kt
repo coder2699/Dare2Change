@@ -23,6 +23,7 @@ import com.example.inout2020_aimers.appblock.util.BlockerVMF
 import com.example.inout2020_aimers.appblock.util.BlockerViewModel
 import com.example.inout2020_aimers.databinding.FragmentBlockerBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.fragment_blocker.*
 import kotlin.properties.Delegates
 
@@ -110,10 +111,24 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
                     activity?.startService(blockIntent)
 
 //                activity?.finish()
-//                btnStartFocusMode.text = "STOP Focus mode"
+                btnStartFocusMode.text = "Focus Mode is on!"
 
                 }else{
-                    Toast.makeText(requireContext(),"Give usage permission",Toast.LENGTH_SHORT).show()
+
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setTitle("Usage stats permission required")
+                        .setMessage("Permission required to go further")
+
+                        .setNegativeButton("Deny") { dialog, which ->
+                            // Respond to negative button press
+                            Toast.makeText(requireContext(),"Permission required to go further",Toast.LENGTH_SHORT).show()
+                        }
+                        .setPositiveButton("Accept") { dialog, which ->
+                            // Redirecting to Usage Settings
+                            startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
+                        }
+                        .show()
+
                 }
             }
 
@@ -122,12 +137,7 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
 
         }
 
-        // Stopping focus mode ie, stopping BlockService
-        binding.btnStopFocus.setOnClickListener {
 
-            activity?.stopService(blockIntent)
-            Log.d(TAG, "onViewCreated: Stopping Service from BlockerFrag")
-        }
 
 
         // Expanding select apps bottom sheet
@@ -166,10 +176,19 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
                     bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 
                 }else{
-                    Toast.makeText(requireContext(),"Give usage permission", Toast.LENGTH_SHORT).show()
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setTitle("Usage stats permission required")
+                        .setMessage("Permission required to go further")
 
-                    // Redirecting to Usage Settings
-                    startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
+                        .setNegativeButton("Deny") { dialog, which ->
+                            // Respond to negative button press
+                            Toast.makeText(requireContext(),"Permission required to go further",Toast.LENGTH_SHORT).show()
+                        }
+                        .setPositiveButton("Accept") { dialog, which ->
+                            // Redirecting to Usage Settings
+                            startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
+                        }
+                        .show()
                 }
 
 
