@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.lifecycle.ViewModelProviders
@@ -58,20 +59,30 @@ class AddGoalFragment : Fragment() {
             subDate3Picker = setDeadlineDate(binding.subGoal3Date, year, month, day)
             subDate3Picker.show()
         }
+        binding.moreOne.setOnClickListener {
+            binding.subGoal2TextInput.visibility = VISIBLE
+            binding.subGoal2Date.visibility = VISIBLE
+            binding.cal2.visibility = VISIBLE
+            binding.moreTwo.visibility = VISIBLE
+        }
+        binding.moreTwo.setOnClickListener {
+            binding.subGoal3TextInput.visibility = VISIBLE
+            binding.subGoal3Date.visibility = VISIBLE
+            binding.cal3.visibility = VISIBLE
+        }
         binding.doneBtn.setOnClickListener {
             goalsViewModel = ViewModelProviders.of(this).get(GoalsViewModel::class.java)
             if (binding.mainGoalDate.text.toString() == "" || binding.mainGoalEditText.text.toString() == ""
             ) {
-                Snacker(it,"Main Goal cannot be empty").error()
-            } else if(binding.subGoal1Date.text.toString() == "" || binding.subGoal1EditText.text.toString() == ""
-            ){
-                Snacker(it,"Atleast add 1st Sub-Goal").error()
-            } else if((binding.subGoal2Date.text.toString() == "" || binding.subGoal2EditText.text.toString() == "")&&
+                Snacker(it, "Main Goal cannot be empty").error()
+            } else if (binding.subGoal1Date.text.toString() == "" || binding.subGoal1EditText.text.toString() == ""
+            ) {
+                Snacker(it, "Atleast add 1st Sub-Goal").error()
+            } else if ((binding.subGoal2Date.text.toString() == "" || binding.subGoal2EditText.text.toString() == "") &&
                 (binding.subGoal3Date.text.toString() != "" || binding.subGoal3EditText.text.toString() != "")
-            ){
-                Snacker(it,"2nd Sub-Goal should be added").error()
-            }
-            else {
+            ) {
+                Snacker(it, "2nd Sub-Goal should be added").error()
+            } else {
                 val goal = Goals(
                     mainGoal = binding.mainGoalEditText.text.toString(),
                     mainGoalDate = binding.mainGoalDate.text.toString(),

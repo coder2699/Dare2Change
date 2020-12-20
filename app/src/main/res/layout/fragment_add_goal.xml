@@ -51,22 +51,22 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_below="@id/mainGoalTextInput"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@+id/mainGoalDate"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/calendar"/>
+            android:src="@drawable/calendar" />
 
         <EditText
             android:id="@+id/mainGoalDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:focusable="false"
             android:layout_below="@id/mainGoalTextInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:focusable="false"
             android:focusableInTouchMode="false"
             android:hint="Select Deadline"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
             android:textAlignment="center"
             android:textIsSelectable="false" />
 
@@ -99,30 +99,44 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_below="@id/subGoal1TextInput"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@+id/subGoal1Date"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/calendar"/>
+            android:src="@drawable/calendar" />
 
         <EditText
             android:id="@+id/subGoal1Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:focusable="false"
             android:layout_below="@id/subGoal1TextInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:focusable="false"
             android:focusableInTouchMode="false"
             android:hint="Select Deadline"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
             android:textAlignment="center"
             android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/more_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subGoal1Date"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:text="Need more sub-goals?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blackShade" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/subGoal2TextInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/subGoal1Date"
+            android:layout_below="@+id/more_one"
+            android:visibility="gone"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="32dp"
@@ -144,33 +158,51 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
+            android:id="@+id/cal2"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:visibility="gone"
             android:layout_below="@id/subGoal2TextInput"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@+id/subGoal1Date"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/calendar"/>
+            android:src="@drawable/calendar" />
 
         <EditText
             android:id="@+id/subGoal2Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:focusable="false"
             android:layout_below="@id/subGoal2TextInput"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:focusable="false"
             android:focusableInTouchMode="false"
             android:hint="Select Deadline"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
             android:textAlignment="center"
             android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/more_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subGoal2Date"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:text="Need more sub-goals?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blackShade" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/subGoal3TextInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/subGoal2Date"
+            android:layout_below="@+id/more_two"
+            android:visibility="gone"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="32dp"
@@ -193,26 +225,30 @@
 
         <ImageView
             android:layout_width="50dp"
+            android:visibility="gone"
             android:layout_height="50dp"
+            android:id="@+id/cal3"
             android:layout_below="@id/subGoal3TextInput"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@+id/subGoal3Date"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/calendar"/>
+            android:src="@drawable/calendar" />
 
         <EditText
             android:id="@+id/subGoal3Date"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:focusable="false"
             android:layout_below="@id/subGoal3TextInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:focusable="false"
             android:focusableInTouchMode="false"
             android:hint="Select Deadline"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
             android:textAlignment="center"
             android:textIsSelectable="false" />
+
         <Button
             android:id="@+id/doneBtn"
             android:layout_width="wrap_content"
@@ -224,7 +260,6 @@
             android:text="Done"
             android:textColor="@color/black"
             app:backgroundTint="@color/colorPrimary" />
-
 
 
     </RelativeLayout>
