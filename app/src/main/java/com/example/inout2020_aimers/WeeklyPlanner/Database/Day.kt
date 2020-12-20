@@ -8,5 +8,6 @@ data class Day(
     @PrimaryKey(autoGenerate = true) var dayId: Long = 0L,
     var dayTask: String = "",
     var dayName: String="",
-    var id:Int=0
+    var id:Int=0,
+    var done:Int=0
 )
