@@ -5,6 +5,5 @@ import android.graphics.drawable.Drawable
 data class AppListModel(
     val icon : Drawable,
     val packageName : String,
-    val name : String,
-    var isBlocked : Boolean
+    val name : String
 )

@@ -10,6 +10,4 @@ class BlockedApps (
     val packageName : String
 ) : Serializable{
 
-    /*@PrimaryKey(autoGenerate = true)
-    var id : Int? = null*/
 }
