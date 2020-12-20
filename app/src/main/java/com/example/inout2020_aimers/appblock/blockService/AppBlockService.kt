@@ -22,20 +22,16 @@ class AppBlockService() : Service() {
     private val TAG = "AppBlockService"
     lateinit var blockIntent : Intent
     lateinit var blockedApps : ArrayList<BlockedApps>
-    var time by Delegates.notNull<Int>()
+    var timeByUser by Delegates.notNull<Int>()
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        Log.d(TAG, "onStartCommand: Hello Ajay! This is rechable code")
+
         blockedApps = ArrayList()
         blockedApps = intent?.getSerializableExtra("blockedApps") as ArrayList<BlockedApps>
-        for (app in blockedApps){
-            Log.d(TAG, "onStartCommand: blockedapp -> ${app.packageName}")
-        }
-        
-        time = intent?.getIntExtra("time",0)
-        Log.d(TAG, "onStartCommand: Time sent by user -> $time ")
 
+        timeByUser = intent?.getIntExtra("time",0)
 
+        Log.d(TAG, "onStartCommand: Time sent by user -> $timeByUser ")
 
         blockIntent= Intent(applicationContext, BlockActivity::class.java)
         blockIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -48,19 +44,13 @@ class AppBlockService() : Service() {
         var count  = 0
         var currentApp = ""
 
-        Log.d(TAG, "onCreate: SECONDS TO FINISH -> ${time*60000L}")
+        Log.d(TAG, "onCreate: SECONDS TO FINISH -> ${timeByUser*60000L}")
 
 
-        val countDownTimer = object : CountDownTimer(time*60000L,1000){
+        val countDownTimer = object : CountDownTimer(timeByUser*60000L,1000){
             override fun onTick(p0: Long) {
-
                 Log.d(TAG, "onTick: ${p0/1000}")
-
                 currentApp = "Didn't get app"
-//                Log.d(TAG, "onReceive: BACKGROUND SERVICE count -> $count")
-//                count+=1
-//                SystemClock.sleep(1000)
-
                 val time = System.currentTimeMillis()
 
                 val appStatsList = usm.queryUsageStats(
@@ -80,6 +70,7 @@ class AppBlockService() : Service() {
                     Log.d(TAG, "onCreate: In for loop -> ${app.packageName}")
                     if (app.packageName == currentApp.trim()){
                         Log.d(TAG, "onTick: BLOCKED----------------------------")
+                            blockIntent.putExtra("timeLeftUnblock",p0)
                             startActivity(blockIntent)
 
 //                        val open = packageManager.getLaunchIntentForPackage("com.astro.appblocktest")

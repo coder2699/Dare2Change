@@ -8,13 +8,28 @@
     tools:context=".appblock.blockService.BlockActivity">
 
     <TextView
+        android:id="@+id/tvBlockActTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Time left to unblock"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/blackShade"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BLOCKED"
         android:fontFamily="@font/montserrat_bold"
-        android:textSize="18sp"
+        android:text="BLOCKED"
+
         android:textColor="@color/blackShade"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
