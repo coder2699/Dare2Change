@@ -8,8 +8,6 @@
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_app_icon"
@@ -17,11 +15,10 @@
         android:roundIcon="@mipmap/ic_app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
-        <activity android:name=".appblock.blockService.BlockActivity"></activity>
-        <activity
-            android:name=".MyCustomAppIntro"
-            android:label="My Custom AppIntro" />
-        <activity android:name=".ui.HomeActivity">
+
+ <activity
+            android:name=".ui.HomeActivity"/>
+        <activity android:name=".MyCustomAppIntro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +28,12 @@
         <activity android:name=".ui.auth.AuthActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ProTips.ProTipsActivity" />
+        <activity android:name=".appblock.blockService.BlockActivity"></activity>
 
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
         <service android:name=".appblock.blockService.AppBlockService"
             android:process=":appblock.blockService.AppBlockService"
             android:stopWithTask="false" />
