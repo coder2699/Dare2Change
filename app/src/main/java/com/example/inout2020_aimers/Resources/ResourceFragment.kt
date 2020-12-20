@@ -35,34 +35,12 @@ class ResourceFragment : Fragment() {
             "https://memory.ai/timely-blog/productivity-techniques"
         ),
         Resources(//Done
-            "Follow @imshivkhera\n" +
-                    "- Mr. Shiv Khera is an Author, Educator, Business Consultant and successful Entrepreneur, he is a much sought-after speaker.",
-            "https://twitter.com/imshivkhera"
+            "Follow These 8 Steps to Stay Focused and Reach Your Goals",
+            "https://www.entrepreneur.com/article/288682"
         ),
         Resources(//Done
-            "Follow @RobinSharma\n" +
-                    "- One of world’s top leadership experts + Humanitarian + author of the #1 worldwide bestseller #The5amClub",
-            "https://twitter.com/RobinSharma"
-        ),
-        Resources(//Done
-            "Follow @garyvee\n" +
-                    "- entrepreneur, investor, author, speaker",
-            "https://twitter.com/garyvee"
-        ),
-        Resources(//Done
-            "Follow @GrantCardone\n" +
-                    "- Star of Undercover Billionaire, CEO CardoneCapital \$2.2B AUM, Author & Founder of 10X Movement.",
-            "https://twitter.com/GrantCardone"
-        ),
-        Resources(//Done
-            "Follow @BrianTracy\n" +
-                    "- Professional Speaker, Author, Success Expert, CEO of BrianTracy International & 14 Step Goal-Setting Guide",
-            "https://twitter.com/BrianTracy"
-        ),
-        Resources(//Done
-            "Follow @OfficialJimRohn\n" +
-                    ", the man many consider to be America's Foremost Business Philosopher, shared his success philosophies and principles for over 46 years.",
-            "https://twitter.com/OfficialJimRohn"
+            "5 Ways To Stay Focused In A World Full Of Distractions",
+            "https://www.fastcompany.com/3033416/5-ways-to-stay-focused-in-a-world-full-of-distractions"
         ),
         Resources(//Done
             "Eat That Frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less Time",
