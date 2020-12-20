@@ -1,11 +1,11 @@
-package com.example.inout2020_aimers.appblock
+package com.example.inout2020_aimers.appblock.util
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inout2020_aimers.R
+import com.example.inout2020_aimers.appblock.AppListModel
 import com.example.inout2020_aimers.appblock.database.BlockedApps
 import kotlinx.android.synthetic.main.item_select_apps.view.*
 

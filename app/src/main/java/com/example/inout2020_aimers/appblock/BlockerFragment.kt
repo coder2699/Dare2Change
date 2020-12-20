@@ -8,20 +8,23 @@ import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.inout2020_aimers.R
+import com.example.inout2020_aimers.appblock.blockService.AppBlockService
 import com.example.inout2020_aimers.appblock.database.BlockedApps
 import com.example.inout2020_aimers.appblock.database.BlockedAppsRepository
 import com.example.inout2020_aimers.appblock.database.BlockerDatabase
+import com.example.inout2020_aimers.appblock.util.AppsAdapter
+import com.example.inout2020_aimers.appblock.util.BlockerVMF
+import com.example.inout2020_aimers.appblock.util.BlockerViewModel
 import com.example.inout2020_aimers.databinding.FragmentBlockerBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.fragment_blocker.*
+import kotlin.properties.Delegates
 
 class BlockerFragment : Fragment(R.layout.fragment_blocker){
 
@@ -34,6 +37,8 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
     private lateinit var viewModel: BlockerViewModel
 
     private lateinit var blockedAppList : ArrayList<BlockedApps>
+    private lateinit var blockIntent : Intent
+    private var time : Int = 0
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -48,6 +53,7 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         viewModel = ViewModelProvider(requireActivity(),factory).get(BlockerViewModel::class.java)
 
         blockedAppList = ArrayList()
+        blockIntent = Intent(requireContext(),AppBlockService::class.java)
 
         viewModel.getBlockedApps().observe(viewLifecycleOwner, Observer {
             blockedAppList.clear()
@@ -82,6 +88,46 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
             layoutManager =LinearLayoutManager(activity)
         }
 
+
+        // Starting Focus Mode
+        binding.btnStartFocusMode.setOnClickListener {
+
+            if (binding.etTime.text.toString().isEmpty()){
+                Toast.makeText(requireContext(),"Enter time in minutes",Toast.LENGTH_SHORT).show()
+            }else{
+                time = binding.etTime.text.toString().toInt()
+                if(isAccessGranted()){
+
+                    val blockedAppsString = ArrayList<String>()
+
+                    for (app in blockedAppList){
+                        blockedAppsString.add(app.packageName)
+                    }
+
+                    blockIntent.putExtra("blockedApps",blockedAppList)
+                    blockIntent.putExtra("time",time)
+                    Log.d(TAG, "onCreate: SERVICE CALLED")
+                    activity?.startService(blockIntent)
+
+//                activity?.finish()
+//                btnStartFocusMode.text = "STOP Focus mode"
+
+                }else{
+                    Toast.makeText(requireContext(),"Give usage permission",Toast.LENGTH_SHORT).show()
+                }
+            }
+
+
+
+
+        }
+
+        // Stopping focus mode ie, stopping BlockService
+        binding.btnStopFocus.setOnClickListener {
+
+            activity?.stopService(blockIntent)
+            Log.d(TAG, "onViewCreated: Stopping Service from BlockerFrag")
+        }
 
 
         // Expanding select apps bottom sheet

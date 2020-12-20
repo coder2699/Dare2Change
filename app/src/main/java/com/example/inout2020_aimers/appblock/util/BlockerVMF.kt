@@ -1,4 +1,4 @@
-package com.example.inout2020_aimers.appblock
+package com.example.inout2020_aimers.appblock.util
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
