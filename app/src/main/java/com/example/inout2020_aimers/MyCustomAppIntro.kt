@@ -16,10 +16,12 @@ class MyCustomAppIntro : AppIntro() {
     lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sharedPreferences = this?.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE)!!
+        sharedPreferences = this.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE)!!
         // Make sure you don't call setContentView!
-        if (sharedPreferences.getInt("FIRST_RUN", 0) == 1)
+        if (sharedPreferences.getInt("FIRST_RUN", 0) == 1){
             startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }
         // Call addSlide passing your Fragments.
         // You can use AppIntroFragment to use a pre-built fragment
 
