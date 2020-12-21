@@ -1,14 +1,17 @@
 package com.example.inout2020_aimers.appblock
 
 import android.app.AppOpsManager
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +29,10 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_blocker.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.properties.Delegates
 
 class BlockerFragment : Fragment(R.layout.fragment_blocker){
@@ -42,9 +49,15 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
     private lateinit var blockIntent : Intent
     private var time : Int = 0
 
-
+    private lateinit var progressDialog : ProgressDialog
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        progressDialog = ProgressDialog(requireContext());
+        progressDialog.setMessage("Getting installed apps");
+        progressDialog.setTitle("A moment please...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         val database = BlockerDatabase(requireActivity().applicationContext)
         val repository = BlockedAppsRepository(database)
@@ -78,6 +91,13 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
             adapter = bottomSheetAdapter
             layoutManager =LinearLayoutManager(activity)
         }
+
+        // backButton - Hiding BottomSheet
+        binding.bmSheet.ibBack.setOnClickListener {
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        }
+
+
 
 
         // Starting Focus Mode
@@ -135,24 +155,35 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
 
                 // Get App list
                 if(isAccessGranted()){
-                    val listApps = activity?.packageManager?.getInstalledPackages(0)
 
-                    for( i in listApps!!){
-                        val appIcon = i.applicationInfo.loadIcon(activity?.packageManager)
-                        val appName = i.applicationInfo.loadLabel(activity?.packageManager!!).toString()
-                        val appPackageName = i.applicationInfo.packageName.toString()
+                    showProgressBar()
+                    
+                    CoroutineScope(Dispatchers.IO).launch {
+                        val listApps = activity?.packageManager?.getInstalledPackages(0)
 
-                        installedApps.add(
-                            AppListModel(
-                                icon = appIcon,
-                                name = appName,
-                                packageName = appPackageName
+                        for( i in listApps!!){
+                            val appIcon = i.applicationInfo.loadIcon(activity?.packageManager)
+                            val appName = i.applicationInfo.loadLabel(activity?.packageManager!!).toString()
+                            val appPackageName = i.applicationInfo.packageName.toString()
+
+                            installedApps.add(
+                                AppListModel(
+                                    icon = appIcon,
+                                    name = appName,
+                                    packageName = appPackageName
+                                )
                             )
-                        )
-                    } // End For loop
+                        }
 
-                    bottomSheetAdapter.notifyDataSetChanged()
-                    bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+                        withContext(Dispatchers.Main){
+                            bottomSheetAdapter.notifyDataSetChanged()
+                            hideProgressBar()
+                            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+                        }
+                    }
+
+                     // End For loop
+
 
                 }else{
 
@@ -194,6 +225,14 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         }catch (ex : PackageManager.NameNotFoundException){
             return false
         }
+    }
+
+    private fun hideProgressBar(){
+        progressDialog.hide()
+    }
+
+    private fun showProgressBar(){
+        progressDialog.show()
     }
 
 }

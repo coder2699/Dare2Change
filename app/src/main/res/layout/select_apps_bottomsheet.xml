@@ -11,16 +11,16 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="Select Apps to block"
         android:textColor="@color/blackShade"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibBack"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -33,4 +33,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/ibBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
