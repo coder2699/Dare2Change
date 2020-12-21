@@ -35,21 +35,21 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.properties.Delegates
 
-class BlockerFragment : Fragment(R.layout.fragment_blocker){
+class BlockerFragment : Fragment(R.layout.fragment_blocker) {
 
     private val TAG = "BlockerFragment"
-    private lateinit var binding : FragmentBlockerBinding
-    private lateinit var installedApps : ArrayList<AppListModel>
+    private lateinit var binding: FragmentBlockerBinding
+    private lateinit var installedApps: ArrayList<AppListModel>
 
     private lateinit var bottomSheetAdapter: AppsAdapter
 
     private lateinit var viewModel: BlockerViewModel
 
-    private lateinit var blockedAppList : ArrayList<BlockedApps>
-    private lateinit var blockIntent : Intent
-    private var time : Int = 0
+    private lateinit var blockedAppList: ArrayList<BlockedApps>
+    private lateinit var blockIntent: Intent
+    private var time: Int = 0
 
-    private lateinit var progressDialog : ProgressDialog
+    private lateinit var progressDialog: ProgressDialog
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -62,12 +62,12 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         val database = BlockerDatabase(requireActivity().applicationContext)
         val repository = BlockedAppsRepository(database)
         val factory = BlockerVMF(repository)
-        viewModel = ViewModelProvider(requireActivity(),factory).get(BlockerViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity(), factory).get(BlockerViewModel::class.java)
 
         blockedAppList = ArrayList()
 
         // BlockScreen Intent
-        blockIntent = Intent(requireContext(),AppBlockService::class.java)
+        blockIntent = Intent(requireContext(), AppBlockService::class.java)
 
 
         viewModel.getBlockedApps().observe(viewLifecycleOwner, Observer {
@@ -80,16 +80,17 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         binding = FragmentBlockerBinding.bind(view)
 
         // Initialization of BottomSheet
-        val bottomSheetBehavior = BottomSheetBehavior.from(binding.bmSheet.layoutSelectAppsBottomSheet)
+        val bottomSheetBehavior =
+            BottomSheetBehavior.from(binding.bmSheet.layoutSelectAppsBottomSheet)
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
 
         installedApps = ArrayList()
-        bottomSheetAdapter = AppsAdapter(installedApps,viewModel,blockedAppList)
+        bottomSheetAdapter = AppsAdapter(installedApps, viewModel, blockedAppList)
 
         // BottomSheet RecyclerView Setup
         binding.bmSheet.rvSelectApps.apply {
             adapter = bottomSheetAdapter
-            layoutManager =LinearLayoutManager(activity)
+            layoutManager = LinearLayoutManager(activity)
         }
 
         // backButton - Hiding BottomSheet
@@ -97,46 +98,53 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
         }
 
-
+        if (!isAccessGranted()) {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Usage stats permission required")
+                .setMessage("Permission required to go further")
+                .setCancelable(false)
+                .setPositiveButton("Accept") { dialog, which ->
+                    // Redirecting to Usage Settings
+                    startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
+                }
+                .show()
+        }
 
 
         // Starting Focus Mode
         binding.btnStartFocusMode.setOnClickListener {
 
-            if (binding.etTime.text.toString().isEmpty()){
-                Toast.makeText(requireContext(),"Enter time in minutes",Toast.LENGTH_SHORT).show()
-            }else if (blockedAppList.isEmpty()){
-                Snackbar.make(requireView(),"Select apps to block",Snackbar.LENGTH_SHORT).show()
-            }else{
+            if (binding.etTime.text.toString().isEmpty()) {
+                Toast.makeText(requireContext(), "Enter time in minutes", Toast.LENGTH_SHORT).show()
+            } else if (blockedAppList.isEmpty()) {
+                Snackbar.make(requireView(), "Select apps to block", Snackbar.LENGTH_SHORT).show()
+            } else {
                 time = binding.etTime.text.toString().toInt()
 
-                if(isAccessGranted()){
+                if (isAccessGranted()) {
                     val blockedAppsString = ArrayList<String>()
 
-                    for (app in blockedAppList){
+                    for (app in blockedAppList) {
                         blockedAppsString.add(app.packageName)
                     }
 
-                    blockIntent.putExtra("blockedApps",blockedAppList)
-                    blockIntent.putExtra("time",time)
+                    blockIntent.putExtra("blockedApps", blockedAppList)
+                    blockIntent.putExtra("time", time)
 
                     Log.d(TAG, "onCreate: SERVICE CALLED")
 
                     activity?.startService(blockIntent)
 
-                btnStartFocusMode.text = "Focus Mode is on!"
-                    activity?.finish()
+                    btnStartFocusMode.text = "Focus Mode is on!"
+//                    activity?.finish()
 
-                }else{
+                } else {
 
                     // Asking user for permission
                     MaterialAlertDialogBuilder(requireContext())
                         .setTitle("Usage stats permission required")
                         .setMessage("Permission required to go further")
-                        .setNegativeButton("Deny") { dialog, which ->
-                            // Respond to negative button press
-                            Toast.makeText(requireContext(),"Permission required to go further",Toast.LENGTH_SHORT).show()
-                        }
+                        .setCancelable(false)
                         .setPositiveButton("Accept") { dialog, which ->
                             // Redirecting to Usage Settings
                             startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
@@ -151,57 +159,38 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
         // Expanding select apps bottom sheet
         binding.toolBarBlockerFragment.setOnMenuItemClickListener { menuItem ->
 
-            if (menuItem.itemId == R.id.selectApps){
+            if (menuItem.itemId == R.id.selectApps) {
 
                 // Get App list
-                if(isAccessGranted()){
 
-                    showProgressBar()
-                    
-                    CoroutineScope(Dispatchers.IO).launch {
-                        val listApps = activity?.packageManager?.getInstalledPackages(0)
+                showProgressBar()
 
-                        for( i in listApps!!){
-                            val appIcon = i.applicationInfo.loadIcon(activity?.packageManager)
-                            val appName = i.applicationInfo.loadLabel(activity?.packageManager!!).toString()
-                            val appPackageName = i.applicationInfo.packageName.toString()
+                CoroutineScope(Dispatchers.IO).launch {
+                    val listApps = activity?.packageManager?.getInstalledPackages(0)
 
-                            installedApps.add(
-                                AppListModel(
-                                    icon = appIcon,
-                                    name = appName,
-                                    packageName = appPackageName
-                                )
+                    for (i in listApps!!) {
+                        val appIcon = i.applicationInfo.loadIcon(activity?.packageManager)
+                        val appName =
+                            i.applicationInfo.loadLabel(activity?.packageManager!!).toString()
+                        val appPackageName = i.applicationInfo.packageName.toString()
+
+                        installedApps.add(
+                            AppListModel(
+                                icon = appIcon,
+                                name = appName,
+                                packageName = appPackageName
                             )
-                        }
-
-                        withContext(Dispatchers.Main){
-                            bottomSheetAdapter.notifyDataSetChanged()
-                            hideProgressBar()
-                            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-                        }
+                        )
                     }
 
-                     // End For loop
-
-
-                }else{
-
-                    // Asking user for permission
-                    MaterialAlertDialogBuilder(requireContext())
-                        .setTitle("Usage stats permission required")
-                        .setMessage("Permission required to go further")
-
-                        .setNegativeButton("Deny") { dialog, which ->
-                            // Respond to negative button press
-                            Toast.makeText(requireContext(),"Permission required to go further",Toast.LENGTH_SHORT).show()
-                        }
-                        .setPositiveButton("Accept") { dialog, which ->
-                            // Redirecting to Usage Settings
-                            startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
-                        }
-                        .show()
+                    withContext(Dispatchers.Main) {
+                        bottomSheetAdapter.notifyDataSetChanged()
+                        hideProgressBar()
+                        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+                    }
                 }
+
+                // End For loop
             }
 
             return@setOnMenuItemClickListener true
@@ -210,28 +199,34 @@ class BlockerFragment : Fragment(R.layout.fragment_blocker){
     }
 
     // Usage stats permission
-    fun isAccessGranted():Boolean{
+    fun isAccessGranted(): Boolean {
         try {
-            val applicationInfo = activity?.packageManager!!.getApplicationInfo(activity?.packageName!!,0)
+            val applicationInfo =
+                activity?.packageManager!!.getApplicationInfo(activity?.packageName!!, 0)
 
-            val appsOpsManager = activity?.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
+            val appsOpsManager =
+                activity?.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
 
             var mode = 0
 
-            if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.KITKAT){
-                mode = appsOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS, applicationInfo.uid,applicationInfo.packageName)
+            if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.KITKAT) {
+                mode = appsOpsManager.checkOpNoThrow(
+                    AppOpsManager.OPSTR_GET_USAGE_STATS,
+                    applicationInfo.uid,
+                    applicationInfo.packageName
+                )
             }
-            return (mode== AppOpsManager.MODE_ALLOWED)
-        }catch (ex : PackageManager.NameNotFoundException){
+            return (mode == AppOpsManager.MODE_ALLOWED)
+        } catch (ex: PackageManager.NameNotFoundException) {
             return false
         }
     }
 
-    private fun hideProgressBar(){
+    private fun hideProgressBar() {
         progressDialog.hide()
     }
 
-    private fun showProgressBar(){
+    private fun showProgressBar() {
         progressDialog.show()
     }
 

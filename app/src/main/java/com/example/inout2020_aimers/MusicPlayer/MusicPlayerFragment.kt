@@ -107,10 +107,10 @@ class MusicPlayerFragment : Fragment() {
 
     // Method to initialize seek bar and audio stats
     private fun initializeSeekBar() {
-        seek_bar.max = mediaPlayer.seconds
+        seek_bar?.max = mediaPlayer.seconds
 
         runnable = Runnable {
-            seek_bar.progress = mediaPlayer.currentSeconds
+            seek_bar?.progress = mediaPlayer.currentSeconds
             handler.postDelayed(runnable, 1000)
         }
         handler.postDelayed(runnable, 1000)
