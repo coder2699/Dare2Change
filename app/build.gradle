@@ -71,39 +71,32 @@ dependencies {
     androidTestImplementation 'androidx.room:room-testing:2.0.0'
 */
     def room_version = "2.2.6"
-
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
-
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
-
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     // Google Signin
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
-    
     // neumorphism
     implementation 'com.github.fornewid:neumorphism:0.3.0'
-
     // Animation
     implementation 'com.airbnb.android:lottie:3.5.0'
-
     // Firebase Auth
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.1.1')
-
     // Declare the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth-ktx'
-
     //Glide
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
-
-//    ViewPager
+    //ViewPager
     implementation 'com.github.AppIntro:AppIntro:6.0.0'
-
+    //App Intro
     implementation 'com.github.iammert:MaterialIntroView:f7b36b7'
+    //Gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 }

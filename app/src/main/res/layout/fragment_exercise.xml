@@ -7,28 +7,28 @@
     android:background="@color/white">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="wrap_content">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:src="@drawable/tada"
+            android:id="@+id/demo"/>
+
         <TextView
             android:id="@+id/head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
+            android:layout_below="@+id/demo"
             android:text="Mountain Pose"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_marginTop="15dp"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:src="@drawable/ex_cc"
-            android:layout_below="@id/head"
-            android:id="@+id/demo"/>
+            android:layout_marginTop="8dp"/>
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
@@ -39,8 +39,8 @@
             android:textColor="@color/black"
             android:layout_alignParentStart="true"
             android:text="Mountain Pose"
-            android:layout_below="@id/demo"
+            android:layout_below="@id/head"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="8dp"/>
     </RelativeLayout>
 </ScrollView>

@@ -28,37 +28,37 @@ class ExerciseFragment : Fragment() {
             binding.description.text=resources.getString(R.string.desc1)
         }
         if(key == 2){
-            binding.demo.setImageResource(R.drawable.ex_bb)
+            binding.demo.setImageResource(R.drawable.tratak)
             binding.head.text=resources.getString(R.string.exHead2)
             binding.description.text=resources.getString(R.string.desc2)
         }
         if(key == 3){
-            binding.demo.setImageResource(R.drawable.ex_cc)
+            binding.demo.setImageResource(R.drawable.vrik)
             binding.head.text=resources.getString(R.string.exHead3)
             binding.description.text=resources.getString(R.string.desc3)
         }
         if(key == 4){
-            binding.demo.setImageResource(R.drawable.ex_dd)
+            binding.demo.setImageResource(R.drawable.tada)
             binding.head.text=resources.getString(R.string.exHead4)
             binding.description.text=resources.getString(R.string.desc4)
         }
         if(key == 5){
-            binding.demo.setImageResource(R.drawable.ex_ee)
+            binding.demo.setImageResource(R.drawable.natrajan)
             binding.head.text=resources.getString(R.string.exHead5)
             binding.description.text=resources.getString(R.string.desc5)
         }
         if(key == 6){
-            binding.demo.setImageResource(R.drawable.ex_ff)
+            binding.demo.setImageResource(R.drawable.paschi)
             binding.head.text=resources.getString(R.string.exHead6)
             binding.description.text=resources.getString(R.string.desc6)
         }
         if(key == 7){
-            binding.demo.setImageResource(R.drawable.ex_gg)
+            binding.demo.setImageResource(R.drawable.ustra)
             binding.head.text=resources.getString(R.string.exHead7)
             binding.description.text=resources.getString(R.string.desc7)
         }
         if(key == 8){
-            binding.demo.setImageResource(R.drawable.ex_hh)
+            binding.demo.setImageResource(R.drawable.virasana)
             binding.head.text=resources.getString(R.string.exHead8)
             binding.description.text=resources.getString(R.string.desc8)
         }

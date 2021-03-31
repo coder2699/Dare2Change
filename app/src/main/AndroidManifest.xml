@@ -25,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.auth.AuthActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ProTips.ProTipsActivity" />
         <activity android:name=".appblock.blockService.BlockActivity"></activity>
