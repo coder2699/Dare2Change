@@ -2,6 +2,7 @@
   
 # Dare2Change  
 ### Decide. Dare. Done  
+  <a href='https://play.google.com/store/apps/details?id=com.dtc.inout2020_aimers'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="30%" height="30%"/></a>
   
 [![GitHub contributors](https://img.shields.io/github/contributors/coder2699/dare2change)](https://github.com/coder2699/inOut2020-Aimers/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/HAC-2020/Aimers)](https://github.com/coder2699/inOut2020-Aimers/issues/) [![apkSize](https://img.shields.io/badge/APK%20size-13MB-blue)](https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk) [![Min-api-level](https://img.shields.io/badge/Min%20API-21-blue)](https://img.shields.io/badge/Min%20API-21-blue/) <br/>
 [![built-for-inout7](https://img.shields.io/badge/Built%20For-InOut7-f81f1f?style=for-the-badge)](https://hackinout.co/) [![makes-people-productive](https://img.shields.io/badge/Makes%20People-Productive-389ad5?style=for-the-badge)](http://ForTheBadge.com)  
@@ -34,9 +35,7 @@
 
 Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you can set your goals, divide them into sub-goals, prioritize your plans and learn new ways to enhance your performance.
 
- <p>Application is available here:-</p>
-<p></p>
-<a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk"><img style="padding-top: 5pt;" src="https://img.shields.io/badge/Download-apk-blue?style=for-the-badge&amp;logo=android" alt="Download App"></a>
+ <p></p>
 <a href="https://www.youtube.com/watch?v=Otl5QRc1OF0">
               <img src="https://img.shields.io/youtube/views/Otl5QRc1OF0?label=Watch%20Demo&amp;logo=youtube&amp;style=for-the-badge" alt="Watch Demo"></a>
 
@@ -53,7 +52,7 @@ Built over the idea of " Decide. Dare. Done", Dare2Change is a place where you c
 
 <p><h2><a id="index3"></a>🛠 How To Setup</h2></p>
 
-<p><a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on your device (minimum requirement of device is Android 5.0). Once the appis installed, click on open the app, your app will open then your are good to go, app is ready for its use.</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.dtc.inout2020_aimers">Click Here Download App from Google Play Store</a>.  After that install the apk file, the app will start installing on your device (minimum requirement of device is Android 5.0). Once the appis installed, click on open the app, your app will open then your are good to go, app is ready for its use.</p>
 
 
 <p><h2><a id="index4"></a>👨‍💻 Tech Stack</h2></p>
