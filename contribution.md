@@ -22,40 +22,41 @@ If you don't see your idea listed, and you think it fits into the goals of the p
  
 # Steps to contribute
 
-1. Fork the project.
-2. Clone your fork.
+1. Comment on the issue you want to work on (You will be assigned only one issue at a time).
+2. Once assigned, Fork the project.
+3. Clone your fork.
 
 ```bash
 git clone https://github.com/<YOUR-USERNAME>/Dare2Change
 ```
 
-3. Add a new remote to upstream
+4. Add a new remote to upstream
 
 ```bash
 git remote add upstream https://github.com/coder2699/Dare2Change
 ```
 
-4. Before start working, create a new branch from the current branch
+5. Before start working, create a new branch from the current branch
 
 ```bash
 git checkout -b <YOUR-NEW-BRANCH>
 ```
 
-5. Work on the new branch. 
+6. Work on the new branch. 
 
-6. Before pushing the code, make sure:
+7. Before pushing the code, make sure:
 - There should be proper code indentation after making changes in a file. You can use ``` Ctrl+Shift+L ``` in android studio to indent the code after making changes in a file.
 - Pull from upstream and check if there are any conflicts. If so solve them and then push the code.
 - The commit message should be short, meaningful, and precise. Try not to add more than 6-7 words.
 - Use ```git status``` to check that no extra file has been modified.
 
-7. To actually make the commit and push it to your GitHub fork, run:
+8. To actually make the commit and push it to your GitHub fork, run:
 
 ```bash
   git add .	
   git commit -m "YOUR COMMIT MESSAGE HERE"
   git push origin {YOUR BRANCH NAME}
 ```
-8. From your forked repository, open a new pull request.
+9. From your forked repository, open a new pull request. In the description of the PR mention the issue that is being solved and add relevant screenshots.
 
-9. Once the pull request is approved and merged, you can pull the changes from upstream to your local repository and delete your extra branch(es).
+10. Once the pull request is approved and merged, you can pull the changes from upstream to your local repository and delete your extra branch(es).
