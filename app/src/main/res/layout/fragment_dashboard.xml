@@ -26,9 +26,10 @@
                 android:background="@color/whiteShade"
                 app:title="@string/app_name"
                 app:titleTextAppearance="@style/ToolbarTheme"
+                app:titleTextColor="@color/colorPrimaryDark" >
 
-                app:titleTextColor="@color/colorPrimaryDark" />
 
+            </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
         <soup.neumorphism.NeumorphButton
@@ -41,7 +42,8 @@
             android:text="Refresh\nYourself"
             android:textColor="@color/black"
 
-
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowColorDark="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/btnBucketlist"
             app:layout_constraintEnd_toStartOf="@+id/btnMilestone"
             app:layout_constraintHorizontal_bias="0.5"
@@ -57,6 +59,8 @@
             android:drawableTop="@drawable/map"
             android:theme="@style/dashBoardItems"
             android:text="\nMilestones"
+            app:neumorph_shadowColorDark="@color/white"
+            app:neumorph_shadowColorLight="@color/white"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/btnSoftMusic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +77,8 @@
             android:theme="@style/dashBoardItems"
             android:text="Your\nBucket List"
             android:textColor="@color/black"
-
+            app:neumorph_shadowColorDark="@color/white"
+            app:neumorph_shadowColorLight="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/btnMotivation"
             app:layout_constraintEnd_toEndOf="@+id/btnExercise"
             app:layout_constraintHorizontal_bias="0.5"
@@ -88,8 +93,9 @@
             android:drawableTop="@drawable/music"
             android:text="Focus\nMusic"
             android:textColor="@color/black"
-
+            app:neumorph_shadowColorLight="@color/white"
             android:theme="@style/dashBoardItems"
+            app:neumorph_shadowColorDark="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/btnProTips"
             app:layout_constraintEnd_toEndOf="@+id/btnMilestone"
             app:layout_constraintHorizontal_bias="0.5"
@@ -104,7 +110,9 @@
             android:drawableTop="@drawable/gallery"
             android:theme="@style/dashBoardItems"
             android:text="Motivational\nWallpapers"
+            app:neumorph_shadowColorLight="@color/white"
             android:textColor="@color/black"
+            app:neumorph_shadowColorDark="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnBucketlist"
             app:layout_constraintHorizontal_bias="0.5"
@@ -119,6 +127,8 @@
             android:drawableTop="@drawable/bulb"
             android:theme="@style/dashBoardItems"
             android:text="Success\nMantras"
+            app:neumorph_shadowColorDark="@color/white"
+            app:neumorph_shadowColorLight="@color/white"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btnSoftMusic"
