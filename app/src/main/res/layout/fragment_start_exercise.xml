@@ -70,7 +70,7 @@
                 android:id="@+id/ex3"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:src="@drawable/ex_c"
+                android:src="@drawable/vrik"
                 android:elevation="5dp"/>
 
             <ImageView
@@ -79,7 +79,7 @@
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_d"
+                android:src="@drawable/tdraw"
                 android:elevation="5dp" />
         </TableRow>
         <TableRow
@@ -96,7 +96,7 @@
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:padding="20dp"
-                android:src="@drawable/ex_e"
+                android:src="@drawable/natrajsana"
                 android:elevation="5dp"/>
 
             <ImageView
@@ -104,7 +104,7 @@
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_ff"
+                android:src="@drawable/paschimottasana"
                 android:layout_gravity="end"
                 android:elevation="5dp"/>
         </TableRow>
@@ -121,7 +121,7 @@
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:padding="20dp"
-                android:src="@drawable/ex_g"
+                android:src="@drawable/r"
                 android:elevation="5dp"/>
 
             <ImageView
@@ -130,7 +130,7 @@
                 android:layout_height="125dp"
                 android:layout_gravity="end"
                 android:layout_marginStart="32dp"
-                android:src="@drawable/ex_h"
+                android:src="@drawable/virasana"
                 android:elevation="5dp" />
         </TableRow>
     </TableLayout>
