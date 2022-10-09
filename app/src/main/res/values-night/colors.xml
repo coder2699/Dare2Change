@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="black">#FF000000</color>
+    <color name="black">#ffffff</color>
     <color name="blackShade">#303030</color>
     <color name="grey">#BAB9B9</color>
 
-    <color name="white">#FFFFFFFF</color>
-    <color name="whiteShade">#FBF7F7</color>
+    <color name="white">#1A1414</color>
+    <color name="whiteShade">#100C08</color>
 <!--    <color name="whiteShade">#FFeeeef0</color>-->
 
-    <color name="colorPrimary">#f9aa33</color>
+    <color name="colorPrimary">#DA8609</color>
     <color name="colorPrimaryDark">#DA8609</color>
-    <color name="colorAccent">#f9aa33</color>
+    <color name="colorAccent">@color/black</color>
 
     <!--SnackBar Colors-->
-    <color name="colorSuccess">#4caf50</color>
-    <color name="colorError">#d32f2f</color>
-    <color name="colorWarning">#ff9800</color>
+    <color name="colorSuccess">#161B17</color>
+    <color name="colorError">@color/blackShade</color>
+    <color name="colorWarning">#1E1D1B</color>
 
     <!-- temp -->
     <color name="softGray">#e8e8e8</color>

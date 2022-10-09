@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#B37B1E</item>
+        <item name="colorPrimaryDark">#0F120F</item> <!-- color of notification bar-->
+        <item name="colorAccent">#2196F3</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
@@ -36,7 +36,7 @@
 
     <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_image</item>
-        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:statusBarColor">#100E10</item>
     </style>
 
 
