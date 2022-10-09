@@ -12,11 +12,11 @@
     <color name="colorPrimary">#DA8609</color>
     <color name="colorPrimaryDark">#DA8609</color>
     <color name="colorAccent">@color/black</color>
-
+    <color name="bodyColor">#0F0F0F</color>
     <!--SnackBar Colors-->
-    <color name="colorSuccess">#161B17</color>
-    <color name="colorError">@color/blackShade</color>
-    <color name="colorWarning">#1E1D1B</color>
+    <color name="colorSuccess">#4caf50</color>
+    <color name="colorError">#d32f2f</color>
+    <color name="colorWarning">#ff9800</color>
 
     <!-- temp -->
     <color name="softGray">#e8e8e8</color>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bodyColor"
     tools:context=".ProTips.LifeLessonsFragment">
 
     <LinearLayout
@@ -313,7 +313,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Body and Mind are closely \nlinked. When your body \nfeels better so,\n too, will your mind."
+                            android:text="Body and \nMind are \nclosely linked. \nWhen your \nbody \nfeels better \nso,\n too, will \nyour mind."
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
