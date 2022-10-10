@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/bodyColor"
     tools:context=".ProTips.LifeLessonsFragment">
 
     <LinearLayout
@@ -41,7 +41,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="start"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
@@ -51,7 +51,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Know where you want\nto go in life."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Setting goals guides\nyour focus and helps you\nsustain that momentum in\nlife."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="11sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -84,7 +84,7 @@
                         android:id="@+id/card2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
@@ -94,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Healthy mind is a happy\nmind."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Your diet definitely has a\nbig impact on your brain\nhealth."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="11sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -140,7 +140,7 @@
                         android:id="@+id/card3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
@@ -150,7 +150,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="75% of Brain is water -\nDrink a lot of it."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -165,7 +165,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Brain is strongly influenced\nby your hydration status."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="11sp"
                             android:textStyle="italic" />
 
@@ -188,7 +188,7 @@
                         android:id="@+id/card4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
@@ -198,7 +198,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Have a sound sleep - 8\nhrs daily."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -212,7 +212,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="It strongly influences\nour capacity to recover both \nmentally and physically."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="11sp"
                             android:textStyle="italic" />
 
@@ -243,7 +243,7 @@
                         android:id="@+id/card5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -253,7 +253,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Daily learn \nsomething new"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -268,7 +268,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Knowledge is power. \nWhen you have \nknowledge, you have \nthe power to \nachieve many things. "
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -289,7 +289,7 @@
                         android:id="@+id/card6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -299,7 +299,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Exercise regularly."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -313,8 +313,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Body and Mind are closely \nlinked. When your body \nfeels better so,\n too, will your mind."
-                            android:textColor="#000000"
+                            android:text="Body and \nMind are \nclosely linked. \nWhen your \nbody \nfeels better \nso,\n too, will \nyour mind."
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -343,7 +343,7 @@
                         android:id="@+id/card7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -353,7 +353,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Don’t Procrastinate"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -368,7 +368,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="If you want to get \nmore out of your life\n, then stop dreaming \nand start taking \nactions today, not \ntomorrow."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -389,7 +389,7 @@
                         android:id="@+id/card8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -399,7 +399,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Have Positive Attitude"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -414,7 +414,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="A positive attitude \nwill help you think of \nwhat you are doing \nas important, which \nis a great way to \nstay motivated and \nworking toward a \ngoal."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -443,7 +443,7 @@
                         android:id="@+id/card9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -453,7 +453,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Never Quit"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -468,7 +468,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="High achievers are \ntenacious, sticking to \ntheir plans and goals \nas long as they need \nto in order to get \nwhere they want to be."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>
@@ -490,7 +490,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center|right"
-                        android:background="#FFFFFF"
+                        android:background="@color/white"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
@@ -500,7 +500,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Erase out anxieties \nand stress-causing \nworries. "
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -515,7 +515,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Wipeout all the stress-causing \ntriggers from \nthe mind."
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="italic" />
                     </LinearLayout>

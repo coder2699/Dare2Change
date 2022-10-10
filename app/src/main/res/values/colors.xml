@@ -12,6 +12,7 @@
     <color name="colorPrimary">#f9aa33</color>
     <color name="colorPrimaryDark">#DA8609</color>
     <color name="colorAccent">#f9aa33</color>
+    <color name="bodyColor">#FFFFFF</color>
 
     <!--SnackBar Colors-->
     <color name="colorSuccess">#4caf50</color>

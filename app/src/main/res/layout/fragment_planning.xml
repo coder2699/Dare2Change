@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".ProTips.PlanningFragment">
 
     <RelativeLayout
@@ -20,7 +20,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="Plan your day out the night before By giving yourself a heads up on what tomorrow will look like, you’re mentally prepared the moment you wake up ."
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="When you’re planning your workday, give yourself a realistic window of time for each item and cut yourself off at that window."
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -78,7 +78,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="Set an alarm to ring every hour. When it rings, stand up and stretch . Before getting back to work, ask yourself if that last hour was productive?"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -107,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Accept the fact that you’re not going to be able to do it all in one day."
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -137,7 +137,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="Brainstorm a quick to-do list Include everything you need to do, want to do, could do. "
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -166,7 +166,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Identify two things that MUST be done today Choose one item from your Work list and one item from your Life list that are your must-dos."
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -196,7 +196,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="Follow 80 20 principle. The 80 20 rule is one of the most helpful concepts for life and time management.  "
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView
@@ -225,7 +225,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Find your ways to beat laziness. There are times when you feel lazy. Find out the root cause and resolve them."
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <ImageView

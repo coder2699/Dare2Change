@@ -35,8 +35,8 @@
         android:layout_marginEnd="10dp"
         android:layout_toRightOf="@id/one"
         android:hint="Sub-Goal1"
-        android:textColor="#7986CB"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#7986CB" />
 
     <ImageView
         android:id="@+id/se"
