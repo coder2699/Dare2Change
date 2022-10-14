@@ -12,8 +12,10 @@
     <color name="colorPrimary">#f9aa33</color>
     <color name="colorPrimaryDark">#DA8609</color>
     <color name="colorAccent">#f9aa33</color>
+    <color name="seekBar">#ffffff</color>
     <color name="bodyColor">#FFFFFF</color>
-
+    <color name="musicBody">#EEAD4D</color>
+    <color name="rectangleDrawable">#E9BE7F</color>
     <!--SnackBar Colors-->
     <color name="colorSuccess">#4caf50</color>
     <color name="colorError">#d32f2f</color>

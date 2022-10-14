@@ -13,6 +13,8 @@
     <color name="colorPrimaryDark">#DA8609</color>
     <color name="colorAccent">@color/black</color>
     <color name="bodyColor">#0F0F0F</color>
+    <color name="musicBody">#000000</color>
+    <color name="rectangleDrawable">#DA8609</color>
     <!--SnackBar Colors-->
     <color name="colorSuccess">#4caf50</color>
     <color name="colorError">#d32f2f</color>

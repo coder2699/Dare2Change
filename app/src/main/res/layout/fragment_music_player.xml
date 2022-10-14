@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/musicBody"
     tools:context=".MusicPlayer.MusicPlayerFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -26,19 +26,49 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
+
+    <ImageView
         android:id="@+id/disc"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="330dp"
+        android:layout_height="320dp"
+        android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/disc" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to play"
+        android:textColor="#000000"
+        android:textStyle="italic"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/staticPic"
+        app:layout_constraintEnd_toEndOf="@+id/disc"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/disc"
+        app:layout_constraintVertical_bias="0.474" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/staticPic"
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="116dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mountians"
+        app:shapeAppearance="@style/CornerCut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+    </com.google.android.material.imageview.ShapeableImageView>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/wave"
@@ -49,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/disc"
+        app:layout_constraintTop_toBottomOf="@+id/staticPic"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/wave" />
@@ -60,8 +90,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:progressTint="@color/colorAccent"
-        android:thumbTint="#7986CB"
+        android:progressTint="@color/seekBar"
+        android:thumbTint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,13 +116,13 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:visibility="gone"
-            app:srcCompat="@drawable/pause_btn" />
+            app:srcCompat="@drawable/pause" />
 
         <ImageView
             android:id="@+id/playBtn"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            app:srcCompat="@drawable/play_btn" />
+            app:srcCompat="@drawable/pb" />
 
         <ImageView
             android:id="@+id/stopBtn"
@@ -101,6 +131,6 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:visibility="gone"
-            app:srcCompat="@drawable/stop_btn" />
+            app:srcCompat="@drawable/stop" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
