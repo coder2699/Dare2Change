@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.SeekBar
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentMusicPlayerBinding
+import kotlinx.android.synthetic.main.fragment_details.view.*
 import kotlinx.android.synthetic.main.fragment_music_player.*
 
 class MusicPlayerFragment : Fragment() {
@@ -31,16 +32,18 @@ class MusicPlayerFragment : Fragment() {
         // Start the media player
         binding.playBtn.setOnClickListener {
             if (pause) {
+                binding.tv.text="Tap to play"
                 mediaPlayer.seekTo(mediaPlayer.currentPosition)
                 mediaPlayer.start()
                 pause = false
             } else {
-
+                binding.tv.text="Now Playing"
                 mediaPlayer = MediaPlayer.create(context, R.raw.fast_and)
                 mediaPlayer.start()
 
             }
             initializeSeekBar()
+            binding.tv.text="Now Playing"
             binding.playBtn.isEnabled = false
             binding.pauseBtn.isEnabled = true
             binding.stopBtn.isEnabled = true
@@ -49,6 +52,7 @@ class MusicPlayerFragment : Fragment() {
             binding.playBtn.visibility = GONE
 
             mediaPlayer.setOnCompletionListener {
+                binding.tv.text="Tap to play"
                 binding.playBtn.isEnabled = true
                 binding.pauseBtn.isEnabled = false
                 binding.stopBtn.isEnabled = false
@@ -68,6 +72,7 @@ class MusicPlayerFragment : Fragment() {
                 binding.stopBtn.visibility = GONE
                 binding.pauseBtn.visibility = GONE
                 binding.playBtn.visibility = VISIBLE
+                binding.tv.text="Tap to play"
             }
         }
         // Stop the media player
@@ -79,7 +84,7 @@ class MusicPlayerFragment : Fragment() {
                 mediaPlayer.reset()
                 mediaPlayer.release()
                 handler.removeCallbacks(runnable)
-
+                binding.tv.text="Tap to play"
                 binding.playBtn.isEnabled = true
                 binding.pauseBtn.isEnabled = false
                 binding.stopBtn.isEnabled = false
