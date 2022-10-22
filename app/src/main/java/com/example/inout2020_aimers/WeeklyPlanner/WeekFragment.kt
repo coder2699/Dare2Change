@@ -5,11 +5,14 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.WeeklyPlanner.Adapter.DayAdapter
 import com.example.inout2020_aimers.WeeklyPlanner.Database.Day
 import com.example.inout2020_aimers.WeeklyPlanner.Database.DayViewModel
@@ -32,6 +35,10 @@ class WeekFragment : Fragment() {
         dayAdapter = DayAdapter(dayViewModel, binding.rv.rootView)
         sharedPreferences = context?.getSharedPreferences("FIRST_OPEN", Context.MODE_PRIVATE)!!
         binding.rv.adapter = dayAdapter
+        binding.toolbarDashboard.inflateMenu(R.menu.reset_btn)
+        binding.toolbarDashboard.setOnMenuItemClickListener {
+            onOptionsItemSelected(it)
+        }
         binding.rv.layoutManager = LinearLayoutManager(context)
         if (sharedPreferences.getInt("FIRST_OPEN",0) == 0) {
             val day0 = Day(
@@ -88,4 +95,27 @@ class WeekFragment : Fragment() {
         return binding.root
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.reset->{
+                val ls=ArrayList<Day>()
+                dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
+                    for(i in list){
+                        i.dayTask=""
+                        ls.add(i)
+                    }
+                })
+                dayViewModel.update(ls[0])
+                dayViewModel.update(ls[1])
+                dayViewModel.update(ls[2])
+                dayViewModel.update(ls[3])
+                dayViewModel.update(ls[4])
+                dayViewModel.update(ls[5])
+                dayViewModel.update(ls[6])
+                dayAdapter.submitList(ls)
+                dayAdapter.dayList=ls
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
