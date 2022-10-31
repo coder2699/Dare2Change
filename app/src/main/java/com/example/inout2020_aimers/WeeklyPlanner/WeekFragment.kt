@@ -3,12 +3,11 @@ package com.example.inout2020_aimers.WeeklyPlanner
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,6 +21,7 @@ class WeekFragment : Fragment() {
     lateinit var sharedPreferences: SharedPreferences
     private lateinit var dayViewModel: DayViewModel
     private var _binding: FragmentWeekBinding? = null
+    lateinit var newList : ArrayList<Day>
     private val binding
         get() = _binding!!
     private lateinit var dayAdapter: DayAdapter
@@ -61,10 +61,10 @@ class WeekFragment : Fragment() {
                 dayName = "THURSDAY",
                 id = 3
             )
-        val day4 = Day(
+            val day4 = Day(
                 dayTask = "",
                 dayName = "FRIDAY",
-            id = 4
+                id = 4
             )
             val day5 = Day(
                 dayTask = "",
@@ -89,6 +89,7 @@ class WeekFragment : Fragment() {
         editor?.apply()
 
         dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
+            newList = list as ArrayList<Day>
             dayAdapter.submitList(list)
             dayAdapter.dayList = list as ArrayList<Day>
         })
@@ -98,24 +99,19 @@ class WeekFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.reset->{
-                val ls=ArrayList<Day>()
-                dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
-                    for(i in list){
-                        i.dayTask=""
-                        ls.add(i)
-                    }
-                })
-                dayViewModel.update(ls[0])
-                dayViewModel.update(ls[1])
-                dayViewModel.update(ls[2])
-                dayViewModel.update(ls[3])
-                dayViewModel.update(ls[4])
-                dayViewModel.update(ls[5])
-                dayViewModel.update(ls[6])
-                dayAdapter.submitList(ls)
-                dayAdapter.dayList=ls
+                dayViewModel.getNewLivedata(newList)
+                onResume()
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
+            newList = list as ArrayList<Day>
+            dayAdapter.submitList(list)
+            dayAdapter.dayList = list as ArrayList<Day>
+        })
+        super.onResume()
     }
 }
