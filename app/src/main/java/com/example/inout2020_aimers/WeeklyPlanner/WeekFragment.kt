@@ -3,13 +3,15 @@ package com.example.inout2020_aimers.WeeklyPlanner
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.WeeklyPlanner.Adapter.DayAdapter
 import com.example.inout2020_aimers.WeeklyPlanner.Database.Day
 import com.example.inout2020_aimers.WeeklyPlanner.Database.DayViewModel
@@ -19,6 +21,7 @@ class WeekFragment : Fragment() {
     lateinit var sharedPreferences: SharedPreferences
     private lateinit var dayViewModel: DayViewModel
     private var _binding: FragmentWeekBinding? = null
+    lateinit var newList : ArrayList<Day>
     private val binding
         get() = _binding!!
     private lateinit var dayAdapter: DayAdapter
@@ -32,6 +35,10 @@ class WeekFragment : Fragment() {
         dayAdapter = DayAdapter(dayViewModel, binding.rv.rootView)
         sharedPreferences = context?.getSharedPreferences("FIRST_OPEN", Context.MODE_PRIVATE)!!
         binding.rv.adapter = dayAdapter
+        binding.toolbarDashboard.inflateMenu(R.menu.reset_btn)
+        binding.toolbarDashboard.setOnMenuItemClickListener {
+            onOptionsItemSelected(it)
+        }
         binding.rv.layoutManager = LinearLayoutManager(context)
         if (sharedPreferences.getInt("FIRST_OPEN",0) == 0) {
             val day0 = Day(
@@ -54,10 +61,10 @@ class WeekFragment : Fragment() {
                 dayName = "THURSDAY",
                 id = 3
             )
-        val day4 = Day(
+            val day4 = Day(
                 dayTask = "",
                 dayName = "FRIDAY",
-            id = 4
+                id = 4
             )
             val day5 = Day(
                 dayTask = "",
@@ -82,10 +89,29 @@ class WeekFragment : Fragment() {
         editor?.apply()
 
         dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
+            newList = list as ArrayList<Day>
             dayAdapter.submitList(list)
             dayAdapter.dayList = list as ArrayList<Day>
         })
         return binding.root
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.reset->{
+                dayViewModel.getNewLivedata(newList)
+                onResume()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        dayViewModel.allDays.observe(viewLifecycleOwner, Observer { list ->
+            newList = list as ArrayList<Day>
+            dayAdapter.submitList(list)
+            dayAdapter.dayList = list as ArrayList<Day>
+        })
+        super.onResume()
+    }
 }
