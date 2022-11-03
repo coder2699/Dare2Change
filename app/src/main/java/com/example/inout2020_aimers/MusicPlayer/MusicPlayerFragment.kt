@@ -1,17 +1,25 @@
 package com.example.inout2020_aimers.MusicPlayer
 
+import android.content.Context
 import android.media.MediaPlayer
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.*
 import android.view.ViewGroup
 import android.widget.SeekBar
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentMusicPlayerBinding
-import kotlinx.android.synthetic.main.fragment_details.view.*
+import com.example.inout2020_aimers.utils.Snacker
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_music_player.*
 
 class MusicPlayerFragment : Fragment() {
@@ -23,6 +31,7 @@ class MusicPlayerFragment : Fragment() {
     private val binding
         get() = _binding!!
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +40,10 @@ class MusicPlayerFragment : Fragment() {
         _binding = FragmentMusicPlayerBinding.inflate(inflater, container, false)
         // Start the media player
         binding.playBtn.setOnClickListener {
+            if(isNetworkAvailable()==false){
+                Snacker(it,"No Connection! try connecting to your Internet").error()
+                return@setOnClickListener
+            }
             if (pause) {
                 binding.tv.text="Tap to play"
                 mediaPlayer.seekTo(mediaPlayer.currentPosition)
@@ -132,4 +145,27 @@ class MusicPlayerFragment : Fragment() {
         get() {
             return this.currentPosition / 1000
         }
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    fun isNetworkAvailable():Boolean{
+        val connectivityManager =
+            context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (connectivityManager != null) {
+            val capabilities =
+                connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+            if (capabilities != null) {
+                if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                    Log.i("Internet", "NetworkCapabilities.TRANSPORT_CELLULAR")
+                    return true
+                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                    Log.i("Internet", "NetworkCapabilities.TRANSPORT_WIFI")
+                    return true
+                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+                    Log.i("Internet", "NetworkCapabilities.TRANSPORT_ETHERNET")
+                    return true
+                }
+            }
+        }
+        return false
+    }
 }
