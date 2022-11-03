@@ -16,11 +16,10 @@ import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.content.getSystemService
 import com.example.inout2020_aimers.R
 import com.example.inout2020_aimers.databinding.FragmentMusicPlayerBinding
-import kotlinx.android.synthetic.main.fragment_details.view.*
+import com.example.inout2020_aimers.utils.Snacker
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_music_player.*
 
 class MusicPlayerFragment : Fragment() {
@@ -42,7 +41,7 @@ class MusicPlayerFragment : Fragment() {
         // Start the media player
         binding.playBtn.setOnClickListener {
             if(isNetworkAvailable()==false){
-                Toast.makeText(activity,"NO internet",Toast.LENGTH_SHORT).show()
+                Snacker(it,"No Connection! try connecting to your Internet").error()
                 return@setOnClickListener
             }
             if (pause) {
